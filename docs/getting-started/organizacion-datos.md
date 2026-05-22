@@ -57,11 +57,11 @@ Son las capas vectoriales que representan la infraestructura vial a analizar. De
 
 ### Mallas de amenaza
 
-Rásters GeoTIFF que contienen la intensidad del fenómeno para cada período de retorno (Tr). Deben seguir la convención de nombres establecida en la ficha de datos de entrada (ver [Datos de entrada → Mallas de amenaza](../guia-usuario/datos-entrada.md#mallas-de-amenaza)). La herramienta extrae el valor de Tr directamente del nombre del archivo.
+Rásters GeoTIFF que contienen la intensidad del fenómeno para cada período de retorno (Tr). Deben seguir la convención de nombres establecida en la ficha de datos de entrada (ver [Datos de entrada → Mallas de amenaza](../guia-usuario/datos-entrada.md#b-mallas-de-amenaza)). La herramienta extrae el valor de Tr directamente del nombre del archivo.
 
 ### Bases de datos de vulnerabilidad
 
-El archivo `FVU_BSA_V3.csv` contiene las funciones de vulnerabilidad en formato de texto. Consulte [Datos de entrada → Vulnerabilidad y recuperación](../guia-usuario/datos-entrada.md#c-vulnerabilidad-y-recuperacion) para el formato detallado.
+El archivo `FVU_BSA_V3.csv` contiene las funciones de vulnerabilidad en formato de texto. Consulte [Datos de entrada → Vulnerabilidad y recuperación](../guia-usuario/datos-entrada.md) para el formato detallado.
 
 ### Bases de datos de operaciones
 
