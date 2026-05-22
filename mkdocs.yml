@@ -113,3 +113,4 @@ nav:
   - Glosario:
       - glosario/index.md
       - Diccionario de siglas: glosario/siglas.md
+  - Licencia: licencia.md
