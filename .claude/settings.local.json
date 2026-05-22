@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(pip install pymupdf --quiet 2>&1)"
+      "PowerShell(pip install pymupdf --quiet 2>&1)",
+      "PowerShell($git = \"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.10\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; Set-Location \"c:\\\\Users\\\\andre\\\\OneDrive\\\\Documentos\\\\GitHub\\\\BSA Documentation\"; & $git add \"docs/metodologia/modulo-amenaza.md\"; & $git commit -m \"docs\\(metodologia\\): modulo-amenaza - tipos implementados, escalas, cambio climatico\")",
+      "PowerShell($git = \"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.10\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; Set-Location \"c:\\\\Users\\\\andre\\\\OneDrive\\\\Documentos\\\\GitHub\\\\BSA Documentation\"; & $git add \"docs/metodologia/modulo-exposicion.md\"; & $git commit -m \"docs\\(metodologia\\): modulo-exposicion - tipos infra, caracterizacion, segmentacion, valoracion\")",
+      "PowerShell($git = \"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.10\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; Set-Location \"c:\\\\Users\\\\andre\\\\OneDrive\\\\Documentos\\\\GitHub\\\\BSA Documentation\"; & $git add \"docs/metodologia/modulo-vulnerabilidad.md\"; & $git commit -m \"docs\\(metodologia\\): modulo-vulnerabilidad - RMD, FVU vs fragilidad, libreria modular\")",
+      "PowerShell($git = \"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.10\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; Set-Location \"c:\\\\Users\\\\andre\\\\OneDrive\\\\Documentos\\\\GitHub\\\\BSA Documentation\"; & $git add \"docs/metodologia/modulo-criticidad.md\"; & $git commit -m \"docs\\(metodologia\\): modulo-criticidad - analisis multicriterio, puntaje, relacion con PAE\")",
+      "PowerShell($git = \"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\GitHubDesktop\\\\app-3.5.10\\\\resources\\\\app\\\\git\\\\cmd\\\\git.exe\"; Set-Location \"c:\\\\Users\\\\andre\\\\OneDrive\\\\Documentos\\\\GitHub\\\\BSA Documentation\"; & $git add \"docs/metodologia/calculo-riesgo.md\"; & $git commit -m \"docs\\(metodologia\\): calculo-riesgo - CEP, DAE, PAE, PML con formulas arithmatex\")"
     ]
   }
 }
