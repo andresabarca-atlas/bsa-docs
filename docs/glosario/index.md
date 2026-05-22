@@ -1,3 +1,36 @@
-# Glosario
+# Glosario de conceptos
 
-> Página en construcción.
+Definiciones de los términos técnicos utilizados en la metodología y la documentación del BSA 2.0. Ordenadas alfabéticamente.
+
+*Fuente: glosario del Concept Report BSA 2.0.*
+
+---
+
+| Concepto | Definición |
+|----------|-----------|
+| **Amenaza** | Peligro latente de que un evento físico de origen natural, causado o inducido por la acción humana de manera accidental, se presente con una severidad suficiente para causar pérdida de vidas, lesiones u otros impactos en la salud, así como daños y pérdida en bienes, infraestructura, medios de sustento, prestación de servicios y recursos ambientales. |
+| **Amenazas hidrometeorológicas** | Proceso o fenómeno de origen atmosférico, hidrológico u oceanográfico que puede ocasionar la muerte, lesiones u otros impactos a la salud, daños a la propiedad, pérdida de medios de sustento y de servicios, trastornos sociales y económicos, o daños ambientales. |
+| **Análisis hidrológico** | Estudio asociado a la modelación hidrológica para la estimación de avenidas de creciente, mediante el cual se realiza una representación simplificada de los procesos del ciclo del agua en una cuenca hidrográfica. Se realiza con el objetivo de gestionar inundaciones y sequías, o para brindar datos que soporten la toma de decisiones en la gestión integral de una cuenca. |
+| **Análisis y evaluación de riesgo** | Proceso que implica la consideración de las causas y fuentes del riesgo, sus consecuencias y la probabilidad de que ocurran. Relaciona amenaza y vulnerabilidad de los elementos expuestos para determinar posibles efectos sociales, económicos y ambientales y sus probabilidades, con el propósito de definir intervenciones y alcance de la reducción del riesgo. |
+| **Curva de Excedencia de Pérdidas (CEP)** | Curva que especifica las frecuencias anuales con que se espera que ocurran en el futuro eventos que excedan un valor determinado de pérdidas para el portafolio de elementos expuestos analizado. Permite calcular la Pérdida Anual Esperada (PAE) como el área bajo la curva. |
+| **Desastre** | Resultado de la manifestación de uno o varios eventos naturales o antropogénicos no intencionales que, al encontrar condiciones de vulnerabilidad en personas, bienes, infraestructura, medios de subsistencia, prestación de servicios o recursos ambientales, causa daños o pérdidas humanas, materiales, económicas o ambientales, generando una alteración intensa y extendida en las condiciones normales de funcionamiento de la sociedad. |
+| **Espacio muestral** | Conjunto de todos los posibles resultados conocidos de un experimento aleatorio. |
+| **Estacionariedad** | En el análisis de series temporales, propiedad de un proceso estocástico cuya distribución de probabilidad en un instante fijo es la misma para todos los instantes de tiempo. Implica que parámetros como la media y la varianza no varían a lo largo del tiempo. |
+| **Experimento aleatorio** | Todo experimento cuyo resultado está condicionado por el azar y la incertidumbre. Puede repetirse ilimitadamente bajo las mismas condiciones; sus posibles resultados son conocidos de antemano, pero no puede predecirse con exactitud un resultado específico en una realización particular. |
+| **Evento** | Subconjunto del espacio muestral; cualquier subconjunto que contenga uno o varios puntos de muestreo correspondientes a posibles resultados del experimento aleatorio. |
+| **Exposición (Elementos expuestos)** | Presencia de personas, medios de subsistencia, servicios ambientales, recursos económicos y sociales, bienes culturales e infraestructura que, por su localización, pueden ser afectados por la manifestación de una amenaza. |
+| **Forzamiento** | Fuerzas externas actuantes sobre un sistema simulado. A gran escala puede referirse al forzamiento climatológico y meteorológico; a escalas regionales y locales, a forzamientos hidrológicos como la precipitación o los caudales máximos para un lapso dado. |
+| **Frecuencia anual de excedencia** | Medida de probabilidad temporal obtenida como el inverso del período de retorno. Indica la probabilidad con la que una determinada intensidad de inundación será igualada o excedida en un año dado. |
+| **Frecuencia anual de ocurrencia** | Número de veces por año en que se espera que ocurra un evento determinado. |
+| **Gestión del riesgo** | Proceso social de planeación, ejecución, seguimiento y evaluación de políticas y acciones permanentes para el conocimiento del riesgo, la prevención de su generación, su reducción o control cuando ya existe, y la preparación para manejar situaciones de desastre y la posterior recuperación. Su propósito es contribuir a la seguridad, el bienestar y la calidad de vida de las personas y al desarrollo sostenible. |
+| **Hidrograma de creciente** | Representación gráfica de la variación del caudal de un cauce en función del tiempo, producida como consecuencia de un evento de precipitación particular. |
+| **Hietograma de diseño** | Expresión gráfica de la variación de la intensidad o profundidad de precipitación en función del tiempo de duración de un evento de tormenta, discretizados en pasos de tiempo definidos. |
+| **Iso-frecuencia** | Concepto usado en modelación hidrológica/hidráulica para la estimación de zonas de inundación asociadas a un único período de retorno, asumido como el mismo del forzamiento detonante del evento. |
+| **Modelo hidrodinámico** | Procedimiento técnico que reproduce el movimiento o dinámica del agua superficial en una cuenca hidrográfica usando modelos físicos y/o matemáticos. Su objetivo principal es estimar la extensión y magnitud de eventos de inundación a partir de hidrogramas de creciente. |
+| **Pérdida** | Cantidad asociada a una gran incertidumbre, proveniente de diversas fuentes y de los componentes de amenaza y vulnerabilidad. Por su naturaleza aleatoria, se trata como una variable descrita por una distribución de probabilidad, condicionada a la ocurrencia de un evento. |
+| **Período de retorno (Tr)** | También conocido como período o intervalo de recurrencia. Tiempo medio (en años) que transcurre entre eventos independientes de igual o mayor magnitud que un umbral definido. Es el inverso de la frecuencia anual de excedencia. |
+| **Probabilidad** | Área del conocimiento que cuantifica todos los posibles resultados de un experimento en el cual está presente la incertidumbre o aleatoriedad. |
+| **Resiliencia de un sistema** | Capacidad de un sistema de volver a su situación original cuando se produce un acontecimiento que lo perturba (por ejemplo, una amenaza natural o una interrupción por causas humanas). |
+| **Tirante Hídrico (TH)** | Profundidad de inundación, expresada en metros. Parámetro de intensidad de amenaza utilizado en las funciones de vulnerabilidad del BSA 2.0. |
+| **Variable aleatoria** | Variable que puede asumir valores numéricos asociados a los posibles resultados de un experimento aleatorio. |
+| **Vulnerabilidad** | Susceptibilidad o fragilidad física, económica, social, ambiental o institucional de una comunidad o sistema para ser afectado por un evento físico peligroso. Corresponde a la predisposición a sufrir pérdidas o daños en las personas, sus medios de subsistencia y sus sistemas físicos, sociales, económicos y de apoyo. |
