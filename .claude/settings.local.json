@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(pip install pymupdf --quiet 2>&1)"
+    ]
+  }
+}

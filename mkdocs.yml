@@ -1,0 +1,115 @@
+site_name: Blue Spot Analysis 2.0
+site_description: Documentación de la metodología, la herramienta y el dashboard del BSA 2.0
+site_url: https://andresabarca-atlas.github.io/bsa-docs/  # Ajustar si cambia el repositorio
+docs_dir: docs
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Modo oscuro
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  logo: assets/logo-bid.png      # logo del BID (ver Tarea 4)
+  favicon: assets/favicon.png
+
+plugins:
+  - search:
+      lang:
+        - es
+        - en
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: es
+          default: true
+          name: Español
+          build: true
+        - locale: en
+          name: English
+          build: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Inicio: index.md
+  - Metodología:
+      - metodologia/index.md
+      - Introducción y antecedentes: metodologia/antecedentes.md
+      - Propósito, alcances y limitaciones: metodologia/proposito-alcances.md
+      - Conceptos clave: metodologia/conceptos-clave.md
+      - Lógica funcional y arquitectura: metodologia/arquitectura.md
+      - Módulo de Amenaza: metodologia/modulo-amenaza.md
+      - Módulo de Exposición: metodologia/modulo-exposicion.md
+      - Módulo de Vulnerabilidad: metodologia/modulo-vulnerabilidad.md
+      - Módulo de Criticidad: metodologia/modulo-criticidad.md
+      - Cálculo de Riesgo: metodologia/calculo-riesgo.md
+      - Estructura de datos: metodologia/estructura-datos.md
+  - Primeros pasos:
+      - getting-started/index.md
+      - Requisitos: getting-started/requisitos.md
+      - Instalación: getting-started/instalacion.md
+      - Organización de datos: getting-started/organizacion-datos.md
+      - Interfaz de la herramienta: getting-started/interfaz.md
+  - Guía de Usuario:
+      - guia-usuario/index.md
+      - Flujo de trabajo: guia-usuario/flujo-trabajo.md
+      - Datos de entrada: guia-usuario/datos-entrada.md
+      - Configuración de una corrida: guia-usuario/configuracion-corrida.md
+      - Resultados: guia-usuario/resultados.md
+      - Caso de ejemplo: guia-usuario/caso-ejemplo.md
+  - Dashboard:
+      - dashboard/index.md
+      - Exploración de métricas: dashboard/exploracion-metricas.md
+      - Resultados por país: dashboard/resultados-paises.md
+  - Recursos:
+      - recursos/index.md
+      - Referencias: recursos/referencias.md
+      - Preguntas frecuentes: recursos/faq.md
+  - Glosario:
+      - glosario/index.md
+      - Diccionario de siglas: glosario/siglas.md

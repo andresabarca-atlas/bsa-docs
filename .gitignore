@@ -1,0 +1,15 @@
+site/
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Geodatabase pesada (binaria, no versionar)
+fuentes/04_codigo/BSA2_CostaRica/*.gdb/
+fuentes/04_codigo/BSA2_CostaRica/**/*.gdb/

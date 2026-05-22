@@ -1,0 +1,3 @@
+# Glosario
+
+> Página en construcción.

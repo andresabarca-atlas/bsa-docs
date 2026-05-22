@@ -1,0 +1,3 @@
+# Instalación
+
+> Página en construcción.

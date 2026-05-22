@@ -1,0 +1,23 @@
+/* BID brand — institutional blue */
+:root {
+  --md-primary-fg-color:        #0A3A6B;
+  --md-primary-fg-color--light: #1565C0;
+  --md-primary-fg-color--dark:  #072A50;
+  --md-accent-fg-color:         #00ADEF;
+}
+
+/* Figure captions */
+figcaption,
+.caption {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  text-align: center;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+/* Ensure logo is not too tall in the header */
+.md-header__button.md-logo img {
+  height: 32px;
+  width: auto;
+}

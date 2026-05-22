@@ -1,0 +1,3 @@
+# Dashboard
+
+> Página en construcción.

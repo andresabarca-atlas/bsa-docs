@@ -1,0 +1,3 @@
+# Metodología
+
+> Página en construcción.

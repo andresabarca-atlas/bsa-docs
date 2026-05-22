@@ -1,0 +1,55 @@
+Proposed Documentation Structure.txt
+
+Content: This is the proposed structure for the content of the documentation website.
+Action: Use it to sort information based on this structure, let me know if you think there is anything missing.
+
+---
+
+BSA 2.0 Concept Report.md
+
+Content: This was an initial conceptual report done in very early stages of the project, it was very criticized by the team for being very inconsistent and too focused on flood risk.
+Action: It is a good reference for the context of the project, the glossary can be taken directly from here, the basis of the methodology is also good but it needs to be refined, organized and updated based on the code and more recent documents.
+
+---
+
+IDB_InputData_BSA_V1_25022026 1.xlsx
+
+Content: Updated file that we are using to share with people about the information that is required or desirable for running the BSA calculation in their countries. It has mandatory and optional information as well as its requirements. 
+Action: Use it to define the required inputs and their requirements
+
+---
+
+Ppt_BSA_Ejecutiva_15042026_v3_ENG.pdf
+
+Content: Extract of a slide deck that we are using to introduce people into the BSA methodology and platform (short executive version)
+Action: Use it to understand the basics about the BSA 2.0 project and current outputs
+
+---
+
+BSA2_CostaRica.zip
+
+Content: This is the latest version of the code, it is the most important resource here. It also contains the results for the Costa Rica case study.
+Action: Explore the file list in the zip file but do not explore the content of each file, it will burn to many tokens, leave that for Claude Code.
+
+---
+
+Presentación_BSA2_23022026_V3.pdf
+
+Content: Extract of a slide deck that we are using to introduce people into the BSA methodology and platform (longer user-based version).
+Action: Use it to understand about the purpose, functionality, requirements and other aspects of the BSA methodology and tool. 
+
+---
+
+BSA 2.0 AVAILABLE DASHBOARDS
+
+Dominican Republic
+https://experience.arcgis.com/experience/f9ef8a09343e49b8828d590fbc82bae0
+
+Costa Rica
+https://experience.arcgis.com/experience/e1c2ebe138554254b29f5f0ea74f2302
+
+El Salvador
+https://experience.arcgis.com/experience/a9258d5c9ffe4cd0aa6b5fdef675c659
+
+Content: These are the links for the dashboards of each of the case studies for which there are results.
+Action: Explore the dashboards online if you can. They are necessary to document the elements and functionality of the dashboards. If you cannot explore them online, give me options so that you can see them through other means, such as with Claude for Chrome extensions or by sharing the master files used to create the dashboards.

@@ -1,0 +1,14 @@
+roads_path=crc_RVN_WGS84
+bridge_path=crc_rvn_puentes2
+tunnel_path=cr_tuneles_rvn_WGS84
+draina_path=crc_rvn_drenaje2
+fl_rive_raw=ri_h_CR_10.tif;ri_h_CR_100.tif;ri_h_CR_20.tif;ri_h_CR_200.tif;ri_h_CR_50.tif;ri_h_CR_500.tif;ri_h_CR_75.tif
+fl_coas_raw=c_h_CR_1.tif;c_h_CR_10.tif;c_h_CR_100.tif;c_h_CR_1000.tif;c_h_CR_2.tif;c_h_CR_25.tif;c_h_CR_250.tif;c_h_CR_5.tif;c_h_CR_50.tif;c_h_CR_500.tif
+ts_coas_raw=
+earthqu_raw=EQ_CR_PGA_100.tif;EQ_CR_PGA_225.tif;EQ_CR_PGA_2475.tif;EQ_CR_PGA_475.tif;EQ_CR_PGA_4975.tif
+liquefa_raw=
+vulner_data=C:\Users\keom0\Documents\ArcGIS\Projects\BSA2_CostaRica\FVU_BSA_V3.csv
+operat_data=C:\Users\keom0\Documents\ArcGIS\Projects\BSA2_CostaRica\OCO_BSA_CR_V1.csv
+gdppca_doub=45249.62
+road_segme=30
+mod_tp_poly=

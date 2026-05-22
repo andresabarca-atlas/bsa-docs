@@ -1,0 +1,42 @@
+Proposal for the structure of the documentation website
+
+# INICIO
+
+- Introducción al proyecto BSA
+- Indice de las secciones principales
+- Information such as developers, license, contact information, etc.
+
+# METODOLOGÍA
+
+- Introducción
+- Propósito, alcances y limitaciones
+- Lógica funcional y arquitectura
+- Módulo de Amenaza
+- Módulo de Exposición
+- Módulo de Vulnerabilidad
+- Módulo de Criticidad
+- Cálculo de Riesgo
+
+# GETTING STARTED
+
+- Requisitos
+- Funcionamiento en ArcGIS
+- Correr cálculos
+	- Configuraciones
+	- Interfaz de usuario
+
+# Guía de Usuario
+
+- Workflow
+- Inputs
+- Outputs
+
+# DASHBOARD
+
+- Overview
+- Exploración de métricas
+- Resultados disponibles (países)
+
+# GLOSARIO
+
+
