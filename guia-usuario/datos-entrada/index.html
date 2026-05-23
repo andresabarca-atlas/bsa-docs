@@ -1,0 +1,3030 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación de la metodología, la herramienta y el dashboard del BSA 2.0">
+      
+      
+      
+        <link rel="canonical" href="https://andresabarca-atlas.github.io/bsa-docs/guia-usuario/datos-entrada/">
+      
+      
+        <link rel="prev" href="../flujo-trabajo/">
+      
+      
+        <link rel="next" href="../configuracion-corrida/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Datos de entrada - Blue Spot Analysis 2.0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#datos-de-entrada" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Blue Spot Analysis 2.0" class="md-header__button md-logo" aria-label="Blue Spot Analysis 2.0" data-md-component="logo">
+      
+  <img src="../../assets/logo-bid.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Blue Spot Analysis 2.0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Datos de entrada
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../metodologia/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Metodología
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Primeros pasos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Guía de Usuario
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dashboard/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Dashboard
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recursos/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Recursos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glosario/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Glosario
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../licencia/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Licencia
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Blue Spot Analysis 2.0" class="md-nav__button md-logo" aria-label="Blue Spot Analysis 2.0" data-md-component="logo">
+      
+  <img src="../../assets/logo-bid.png" alt="logo">
+
+    </a>
+    Blue Spot Analysis 2.0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../metodologia/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metodología
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Metodología
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/antecedentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción y antecedentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/proposito-alcances/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito, alcances y limitaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/conceptos-clave/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptos clave
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lógica funcional y arquitectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/modulo-amenaza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Amenaza
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/modulo-exposicion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Exposición
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/modulo-vulnerabilidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Vulnerabilidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/modulo-criticidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulo de Criticidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/calculo-riesgo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cálculo de Riesgo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/estructura-datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primeros pasos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Primeros pasos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/organizacion-datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organización de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/interfaz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interfaz de la herramienta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Usuario
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guía de Usuario
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flujo-trabajo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flujo de trabajo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos de entrada
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos de entrada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-inventarios-de-activos-exposicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Inventarios de activos — Exposición
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="a) Inventarios de activos — Exposición">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#red-vial-carreteras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Red vial (carreteras)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Puentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuneles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Túneles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drenajes-alcantarillas-y-elementos-de-drenaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drenajes (alcantarillas y elementos de drenaje)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-mallas-de-amenaza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Mallas de amenaza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="b) Mallas de amenaza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-amenaza-y-medidas-de-intensidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de amenaza y medidas de intensidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convencion-de-nombres-de-los-rasters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convención de nombres de los rásters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convención de nombres de los rásters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codigos-de-identificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos de identificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-nombres-validos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos de nombres válidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-vulnerabilidad-y-recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c) Vulnerabilidad y recuperación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="c) Vulnerabilidad y recuperación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-vulnerabilidad-fvu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funciones de vulnerabilidad (FVU)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones de vulnerabilidad (FVU)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-la-clave-de-taxonomia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de la clave de taxonomía
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tiempos-de-rehabilitacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tiempos de rehabilitación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-criticidad-y-costos-de-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        d) Criticidad y costos de operación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="d) Criticidad y costos de operación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#costos-operativos-por-tipo-de-vehiculo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Costos operativos por tipo de vehículo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Costos operativos por tipo de vehículo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taxonomias-de-vehiculos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taxonomías de vehículos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pib-per-capita-por-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PIB per cápita por día
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-capas-por-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen de capas por componente
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracion-corrida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración de una corrida
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resultados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../caso-ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caso de ejemplo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dashboard/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dashboard
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/exploracion-metricas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exploración de métricas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dashboard/resultados-paises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados por país
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../recursos/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Recursos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recursos/referencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recursos/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preguntas frecuentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../glosario/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glosario
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Glosario
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glosario/siglas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de siglas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licencia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-inventarios-de-activos-exposicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Inventarios de activos — Exposición
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="a) Inventarios de activos — Exposición">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#red-vial-carreteras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Red vial (carreteras)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Puentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuneles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Túneles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drenajes-alcantarillas-y-elementos-de-drenaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drenajes (alcantarillas y elementos de drenaje)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-mallas-de-amenaza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Mallas de amenaza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="b) Mallas de amenaza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-amenaza-y-medidas-de-intensidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de amenaza y medidas de intensidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convencion-de-nombres-de-los-rasters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convención de nombres de los rásters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convención de nombres de los rásters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codigos-de-identificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos de identificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-nombres-validos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos de nombres válidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-vulnerabilidad-y-recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c) Vulnerabilidad y recuperación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="c) Vulnerabilidad y recuperación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-vulnerabilidad-fvu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funciones de vulnerabilidad (FVU)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones de vulnerabilidad (FVU)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-la-clave-de-taxonomia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de la clave de taxonomía
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tiempos-de-rehabilitacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tiempos de rehabilitación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-criticidad-y-costos-de-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        d) Criticidad y costos de operación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="d) Criticidad y costos de operación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#costos-operativos-por-tipo-de-vehiculo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Costos operativos por tipo de vehículo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Costos operativos por tipo de vehículo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taxonomias-de-vehiculos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taxonomías de vehículos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pib-per-capita-por-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PIB per cápita por día
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-capas-por-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen de capas por componente
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="datos-de-entrada">Datos de entrada<a class="headerlink" href="#datos-de-entrada" title="Permanent link">&para;</a></h1>
+<p>El BSA 2.0 requiere cuatro grupos de insumos: <strong>(a) inventarios de activos / exposición</strong>, <strong>(b) mallas de amenaza</strong>, <strong>(c) vulnerabilidad y recuperación</strong>, y <strong>(d) criticidad y costos de operación</strong>. Esta página describe cada conjunto con su descripción, formato, obligatoriedad y atributos principales.</p>
+<hr />
+<h2 id="a-inventarios-de-activos-exposicion">a) Inventarios de activos — Exposición<a class="headerlink" href="#a-inventarios-de-activos-exposicion" title="Permanent link">&para;</a></h2>
+<p>Estas capas representan la infraestructura vial susceptible de ser afectada por amenazas naturales. Todas deben estar en formato <strong>shapefile</strong> y proyectadas en el mismo SRC que los rásters de amenaza.</p>
+<h3 id="red-vial-carreteras">Red vial (carreteras)<a class="headerlink" href="#red-vial-carreteras" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Obligatorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ID_TRAMO</code></td>
+<td>Identificador único del tramo</td>
+<td>Long / String</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><code>Nombre</code></td>
+<td>Nombre de la carretera o ruta</td>
+<td>String</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>Longitud</code></td>
+<td>Longitud del tramo en metros</td>
+<td>Double</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><code>Jerarquía</code></td>
+<td>Nivel de la vía (1 = primaria, 2 = secundaria, 3 = terciaria)</td>
+<td>String</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>ID_País</code></td>
+<td>Código del país (p. ej. CR, DO, SV)</td>
+<td>String</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>vul_f</code></td>
+<td>Código de taxonomía de vulnerabilidad para inundación</td>
+<td>String</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><code>vul_eq</code></td>
+<td>Código de taxonomía de vulnerabilidad para sismo</td>
+<td>String</td>
+<td>Sí (si hay amenaza sísmica)</td>
+</tr>
+<tr>
+<td><code>rep_cost_k</code></td>
+<td>Costo de reposición en miles de USD/metro de carretera</td>
+<td>Double</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><code>T9</code>–<code>T15</code></td>
+<td>TPDA por tipo de vehículo (pick-up, automóvil, bus, camiones)</td>
+<td>Double</td>
+<td>Sí (para PAE)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Formato:</strong> Shapefile de polilíneas (<code>.shp</code>)</li>
+<li><strong>Fuente:</strong> Ministerios de Obras Públicas / Transporte; fuentes secundarias</li>
+<li><strong>Obligatoriedad:</strong> Capa base; siempre requerida</li>
+</ul>
+<h3 id="puentes">Puentes<a class="headerlink" href="#puentes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ID_TRAMO</code></td>
+<td>Relaciona el puente con su tramo vial</td>
+<td>Long / String</td>
+</tr>
+<tr>
+<td><code>Nombre</code></td>
+<td>Nombre del puente</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>País</code></td>
+<td>País de ubicación</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Puente</code></td>
+<td>Tipología estructural (vigas, armadura, etc.)</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Estado</code></td>
+<td>Condición de la infraestructura (Bueno / Regular / Malo)</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Año</code></td>
+<td>Año de construcción</td>
+<td>Double</td>
+</tr>
+<tr>
+<td><code>vul_f</code></td>
+<td>Taxonomía de vulnerabilidad para inundación</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>vul_eq</code></td>
+<td>Taxonomía de vulnerabilidad para sismo</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>rep_cost</code></td>
+<td>Costo de reposición del puente en USD</td>
+<td>Double</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Formato:</strong> Shapefile de puntos (<code>.shp</code>)</li>
+<li><strong>Fuente:</strong> Ministerios de Obras Públicas / Transporte; inventarios de campo</li>
+<li><strong>Obligatoriedad:</strong> Opcional; si se provee, la herramienta calcula DAE y PAE por puente de forma independiente</li>
+</ul>
+<h3 id="tuneles">Túneles<a class="headerlink" href="#tuneles" title="Permanent link">&para;</a></h3>
+<p>Misma estructura de atributos que los puentes. El campo <code>rep_cost</code> corresponde al costo de reposición del túnel.</p>
+<ul>
+<li><strong>Formato:</strong> Shapefile de puntos</li>
+<li><strong>Obligatoriedad:</strong> Opcional</li>
+</ul>
+<h3 id="drenajes-alcantarillas-y-elementos-de-drenaje">Drenajes (alcantarillas y elementos de drenaje)<a class="headerlink" href="#drenajes-alcantarillas-y-elementos-de-drenaje" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ID_TRAMO</code></td>
+<td>Tramo vial al que pertenece el elemento</td>
+<td>Long / String</td>
+</tr>
+<tr>
+<td><code>Drenaje</code></td>
+<td>Tipología (alcantarilla tubular, cajón, badén, cuneta, etc.)</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Estado</code></td>
+<td>Condición estructural</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Año</code></td>
+<td>Año de construcción</td>
+<td>Double</td>
+</tr>
+<tr>
+<td><code>vul_f</code></td>
+<td>Taxonomía de vulnerabilidad para inundación</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>rep_cost</code></td>
+<td>Costo de reposición en USD</td>
+<td>Double</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Formato:</strong> Shapefile de puntos</li>
+<li><strong>Obligatoriedad:</strong> Opcional</li>
+</ul>
+<hr />
+<h2 id="b-mallas-de-amenaza">b) Mallas de amenaza<a class="headerlink" href="#b-mallas-de-amenaza" title="Permanent link">&para;</a></h2>
+<p>Las mallas de amenaza son <strong>rásters GeoTIFF</strong> que contienen, para cada celda, la intensidad del fenómeno asociada a un evento de diseño con un período de retorno (Tr) específico.</p>
+<h3 id="tipos-de-amenaza-y-medidas-de-intensidad">Tipos de amenaza y medidas de intensidad<a class="headerlink" href="#tipos-de-amenaza-y-medidas-de-intensidad" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Amenaza</th>
+<th>ID</th>
+<th>Medida de intensidad</th>
+<th>Unidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inundación fluvial</td>
+<td><code>ri</code></td>
+<td>Tirante hídrico (profundidad de agua)</td>
+<td>metros</td>
+</tr>
+<tr>
+<td>Inundación pluvial / costera</td>
+<td><code>pl</code> / <code>c</code></td>
+<td>Tirante hídrico</td>
+<td>metros</td>
+</tr>
+<tr>
+<td>Tsunami</td>
+<td><code>ts</code></td>
+<td>Altura de ola / tirante hídrico</td>
+<td>metros</td>
+</tr>
+<tr>
+<td>Sismo</td>
+<td><code>eq</code></td>
+<td>Aceleración Pico del Suelo (PGA)</td>
+<td>g o gales</td>
+</tr>
+<tr>
+<td>Licuefacción</td>
+<td><code>li</code></td>
+<td>Susceptibilidad (escala 1–4)</td>
+<td>adimensional</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Amenazas futuras</p>
+<p>Los deslizamientos y huracanes están previstos para fases futuras del BSA 2.0, pero no están implementados en la versión actual.</p>
+</div>
+<h3 id="convencion-de-nombres-de-los-rasters">Convención de nombres de los rásters<a class="headerlink" href="#convencion-de-nombres-de-los-rasters" title="Permanent link">&para;</a></h3>
+<p>La herramienta <strong>extrae automáticamente el período de retorno (Tr) del nombre del archivo</strong>. Es fundamental seguir la siguiente convención:</p>
+<p><strong>Inundación histórica:</strong>
+<div class="highlight"><pre><span></span><code>{amenaza}_{h}_{país}_{Tr}.tif
+</code></pre></div></p>
+<p><strong>Inundación con cambio climático:</strong>
+<div class="highlight"><pre><span></span><code>{amenaza}_{cc}_{escenario}_{año}_{país}_{Tr}.tif
+</code></pre></div></p>
+<p><strong>Sismo:</strong>
+<div class="highlight"><pre><span></span><code>eq_{país}_{medida_intensidad}_{Tr}.tif
+</code></pre></div></p>
+<p><strong>Tsunami:</strong>
+<div class="highlight"><pre><span></span><code>ts_{país}_{Tr}.tif
+</code></pre></div></p>
+<p><strong>Licuefacción</strong> (un único ráster, sin Tr):
+<div class="highlight"><pre><span></span><code>li_{país}.tif
+</code></pre></div></p>
+<h4 id="codigos-de-identificacion">Códigos de identificación<a class="headerlink" href="#codigos-de-identificacion" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Código</th>
+<th>Opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amenaza</td>
+<td><code>{amenaza}</code></td>
+<td><code>pl</code> (pluvial), <code>ri</code> (fluvial), <code>ts</code> (tsunami), <code>eq</code> (sismo), <code>li</code> (licuefacción)</td>
+</tr>
+<tr>
+<td>Horizonte temporal</td>
+<td><code>{h}</code> / <code>{cc}</code></td>
+<td><code>h</code> (histórico), <code>cc</code> (cambio climático)</td>
+</tr>
+<tr>
+<td>Escenario climático</td>
+<td><code>{escenario}</code></td>
+<td><code>rcp26</code>, <code>rcp45</code>, <code>rcp60</code>, <code>rcp85</code></td>
+</tr>
+<tr>
+<td>Año de proyección</td>
+<td><code>{año}</code></td>
+<td>p. ej. <code>2050</code>, <code>2080</code></td>
+</tr>
+<tr>
+<td>País</td>
+<td><code>{país}</code></td>
+<td><code>AR</code>, <code>CR</code>, <code>DO</code>, <code>SV</code>, <code>GT</code>, <code>HN</code>, <code>MX</code>, <code>NI</code>, <code>PA</code>, etc.</td>
+</tr>
+<tr>
+<td>Medida de intensidad (sismo)</td>
+<td><code>{medida}</code></td>
+<td><code>PGA</code>, <code>SAT03</code>, <code>SAT06</code>, etc.</td>
+</tr>
+<tr>
+<td>Período de retorno</td>
+<td><code>{Tr}</code></td>
+<td>Cualquier entero: <code>10</code>, <code>25</code>, <code>50</code>, <code>100</code>, <code>500</code>, <code>1000</code>, etc.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplos-de-nombres-validos">Ejemplos de nombres válidos<a class="headerlink" href="#ejemplos-de-nombres-validos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ri_h_CR_100.tif</code></td>
+<td>Inundación fluvial, histórico, Costa Rica, Tr = 100 años</td>
+</tr>
+<tr>
+<td><code>pl_cc_rcp85_2080_DO_25.tif</code></td>
+<td>Inundación pluvial, cambio climático RCP8.5 año 2080, Rep. Dom., Tr = 25 años</td>
+</tr>
+<tr>
+<td><code>eq_CR_PGA_475.tif</code></td>
+<td>Sismo, Costa Rica, PGA, Tr = 475 años</td>
+</tr>
+<tr>
+<td><code>ts_DO_1500.tif</code></td>
+<td>Tsunami, Rep. Dom., Tr = 1500 años</td>
+</tr>
+<tr>
+<td><code>li_CR.tif</code></td>
+<td>Licuefacción, Costa Rica (sin Tr)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Formato:</strong> GeoTIFF (<code>.tif</code>)</li>
+<li><strong>Fuente:</strong> Fuentes oficiales nacionales, plataformas multilaterales (p. ej. AIGHF, GloFAS, USGS ShakeMap)</li>
+<li><strong>Obligatoriedad:</strong> Al menos un ráster de amenaza es obligatorio; los demás son opcionales según las amenazas presentes en el país</li>
+</ul>
+<hr />
+<h2 id="c-vulnerabilidad-y-recuperacion">c) Vulnerabilidad y recuperación<a class="headerlink" href="#c-vulnerabilidad-y-recuperacion" title="Permanent link">&para;</a></h2>
+<h3 id="funciones-de-vulnerabilidad-fvu">Funciones de vulnerabilidad (FVU)<a class="headerlink" href="#funciones-de-vulnerabilidad-fvu" title="Permanent link">&para;</a></h3>
+<p>El archivo CSV de funciones de vulnerabilidad (<code>FVU_BSA_Vx.csv</code>) contiene las curvas de daño físico (RMD) y las curvas de tiempo de interrupción (T) para cada taxonomía de infraestructura y tipo de amenaza.</p>
+<p><strong>Formato de cada línea:</strong>
+<div class="highlight"><pre><span></span><code>taxonomy,[intensidades],[valores_porcentaje]
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>taxonomy</code></td>
+<td>Clave compuesta que identifica amenaza, tipo de curva, horizonte y tipología de infraestructura</td>
+<td><code>FL_RMD_H_TRNP</code></td>
+</tr>
+<tr>
+<td><code>[intensidades]</code></td>
+<td>Lista de valores de intensidad (tirante en metros, PGA en g, etc.)</td>
+<td><code>[0,0.2,0.5,1.5,50]</code></td>
+</tr>
+<tr>
+<td><code>[valores_porcentaje]</code></td>
+<td>Porcentaje medio de daño o tiempo de interrupción (horas ÷ 24)</td>
+<td><code>[0,1,2,20,20]</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="estructura-de-la-clave-de-taxonomia">Estructura de la clave de taxonomía<a class="headerlink" href="#estructura-de-la-clave-de-taxonomia" title="Permanent link">&para;</a></h4>
+<p>La clave sigue el patrón <code>{amenaza}_{tipo_curva}_{horizonte}_{tipología}</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Prefijo</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FL_RMD_</code></td>
+<td>Inundación (Flood), curva de Daño Medio (Repair Mean Damage)</td>
+</tr>
+<tr>
+<td><code>FL_T_</code></td>
+<td>Inundación, curva de Tiempo de interrupción (Transit)</td>
+</tr>
+<tr>
+<td><code>EQ_RMD_LQ{n}_</code></td>
+<td>Sismo con licuefacción zona <code>n</code> (1–4), daño medio</td>
+</tr>
+<tr>
+<td><code>EQ_T_LQ{n}_</code></td>
+<td>Sismo con licuefacción zona <code>n</code>, tiempo de interrupción</td>
+</tr>
+</tbody>
+</table>
+<p>La parte final de la clave identifica la tipología de infraestructura (p. ej. <code>H_TRNP</code> = histórico, troncal pavimentada; <code>H_REGP</code> = histórico, regional pavimentada).</p>
+<ul>
+<li><strong>Formato:</strong> CSV (<code>.csv</code>), codificación UTF-8</li>
+<li><strong>Fuente:</strong> Literatura especializada, modelos analíticos, criterio experto, talleres técnicos</li>
+<li><strong>Obligatoriedad:</strong> Siempre obligatorio</li>
+</ul>
+<h3 id="tiempos-de-rehabilitacion">Tiempos de rehabilitación<a class="headerlink" href="#tiempos-de-rehabilitacion" title="Permanent link">&para;</a></h3>
+<p>Base de datos con los tiempos estimados de rehabilitación por tipología de infraestructura y nivel de intensidad de amenaza. Se usa para escalar las pérdidas funcionales.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Tipo</code></td>
+<td>Código único de tipología de infraestructura</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Pais</code></td>
+<td>País sin tilde ortográfica</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Int_inunda</code></td>
+<td>Medidas de intensidad de inundación (m)</td>
+<td>Double</td>
+</tr>
+<tr>
+<td><code>Int_sismo</code></td>
+<td>Medidas de intensidad sísmica (gales)</td>
+<td>Double</td>
+</tr>
+<tr>
+<td><code>T_int_inunda</code></td>
+<td>Tiempos de interrupción para inundación (horas)</td>
+<td>Double</td>
+</tr>
+<tr>
+<td><code>T_int_sismo</code></td>
+<td>Tiempos de interrupción para sismo (horas)</td>
+<td>Double</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Formato:</strong> Tabla incluida en el archivo Excel de la ficha de datos de entrada (<code>IDB_InputData_BSA.xlsx</code>, hoja <code>Tiempo_rehab</code>)</li>
+<li><strong>Obligatoriedad:</strong> Requerido para el cálculo de PAE</li>
+</ul>
+<hr />
+<h2 id="d-criticidad-y-costos-de-operacion">d) Criticidad y costos de operación<a class="headerlink" href="#d-criticidad-y-costos-de-operacion" title="Permanent link">&para;</a></h2>
+<h3 id="costos-operativos-por-tipo-de-vehiculo">Costos operativos por tipo de vehículo<a class="headerlink" href="#costos-operativos-por-tipo-de-vehiculo" title="Permanent link">&para;</a></h3>
+<p>Archivo CSV (<code>OCO_BSA_{país}.csv</code>) con los parámetros de operación vehicular por taxonomía, usados para valorar las pérdidas funcionales.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>taxonomy</code></td>
+<td>Tipo de vehículo: T9, T10, T11, T12, T13, T14, T15</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>COV</code></td>
+<td>Costo de operación vehicular (USD/km por vehículo)</td>
+<td>Double</td>
+</tr>
+<tr>
+<td><code>OCU</code></td>
+<td>Ocupantes promedio por vehículo (personas)</td>
+<td>Double</td>
+</tr>
+</tbody>
+</table>
+<h4 id="taxonomias-de-vehiculos">Taxonomías de vehículos<a class="headerlink" href="#taxonomias-de-vehiculos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T9</td>
+<td>Pick-up</td>
+</tr>
+<tr>
+<td>T10</td>
+<td>Automóvil</td>
+</tr>
+<tr>
+<td>T11</td>
+<td>Autobús</td>
+</tr>
+<tr>
+<td>T12</td>
+<td>Camión ligero</td>
+</tr>
+<tr>
+<td>T13</td>
+<td>Camión mediano</td>
+</tr>
+<tr>
+<td>T14</td>
+<td>Camión pesado</td>
+</tr>
+<tr>
+<td>T15</td>
+<td>Camión articulado</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Formato:</strong> CSV (<code>.csv</code>)</li>
+<li><strong>Fuente:</strong> Ministerio de Hacienda o banca multilateral del país</li>
+<li><strong>Obligatoriedad:</strong> Obligatorio si se quiere calcular PAE (debe acompañarse del PIB per cápita por día)</li>
+</ul>
+<h3 id="pib-per-capita-por-dia">PIB per cápita por día<a class="headerlink" href="#pib-per-capita-por-dia" title="Permanent link">&para;</a></h3>
+<p>Valor escalar en USD utilizado para valorar el tiempo de viaje perdido por los usuarios durante una interrupción vial.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code></td>
+<td>Identificador de la unidad administrativa de segundo nivel</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>Pais</code></td>
+<td>País</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>GDP_Cap</code></td>
+<td>PIB per cápita anual por unidad territorial (USD)</td>
+<td>Double</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Cálculo del valor diario</p>
+<p>La herramienta recibe el valor ya convertido a <strong>por día</strong>. Divida el PIB per cápita anual entre 365 antes de ingresarlo.</p>
+</div>
+<ul>
+<li><strong>Formato:</strong> Valor escalar (ingresado directamente en el parámetro 12 del toolbox)</li>
+<li><strong>Fuente:</strong> Bancos centrales, Banco Mundial, CEPAL</li>
+<li><strong>Obligatoriedad:</strong> Obligatorio si se provee la base de costos operativos (parámetro 11)</li>
+</ul>
+<hr />
+<h2 id="resumen-de-capas-por-componente">Resumen de capas por componente<a class="headerlink" href="#resumen-de-capas-por-componente" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Capa</th>
+<th>Importancia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exposición</td>
+<td>Red vial (polilíneas)</td>
+<td>Core — obligatoria</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>Puentes (puntos)</td>
+<td>Core — recomendada</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>Drenajes (puntos)</td>
+<td>Core — recomendada</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>Nombre de corredores</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>Estado de calzada</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>Fallas de pavimento</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>Nivel de servicio</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>TPDA (tránsito)</td>
+<td>Core — obligatorio para PAE</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>Pasos fronterizos</td>
+<td>Referencia</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>Puertos</td>
+<td>Referencia</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>Aeropuertos</td>
+<td>Referencia</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>Nodos de producción/exportación</td>
+<td>Referencia</td>
+</tr>
+<tr>
+<td>Exposición</td>
+<td>Cadenas logísticas</td>
+<td>Referencia</td>
+</tr>
+<tr>
+<td>Vulnerabilidad</td>
+<td>Funciones de daño (FVU CSV)</td>
+<td>Core — obligatoria</td>
+</tr>
+<tr>
+<td>Vulnerabilidad</td>
+<td>Tiempos de rehabilitación</td>
+<td>Core — obligatoria</td>
+</tr>
+<tr>
+<td>Operaciones</td>
+<td>PIB per cápita</td>
+<td>Core — para PAE</td>
+</tr>
+<tr>
+<td>Operaciones</td>
+<td>Costos operativos (OCO CSV)</td>
+<td>Core — para PAE</td>
+</tr>
+<tr>
+<td>Amenaza</td>
+<td>Inundación fluvial (rásters por Tr)</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Amenaza</td>
+<td>Tsunami (rásters por Tr)</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Amenaza</td>
+<td>Sismo (rásters por Tr)</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Amenaza</td>
+<td>Inundación pluvial (rásters por Tr)</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Amenaza</td>
+<td>Inundación fluvial — cambio climático</td>
+<td>Referencia</td>
+</tr>
+<tr>
+<td>Amenaza</td>
+<td>Zonas climáticas CC</td>
+<td>Referencia</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../flujo-trabajo/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Flujo de trabajo">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Flujo de trabajo
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../configuracion-corrida/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Configuración de una corrida">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Configuración de una corrida
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
