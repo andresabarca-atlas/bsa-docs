@@ -46,7 +46,7 @@ plugins:
           build: true
         - locale: en
           name: English
-          build: true
+          build: false  # Reactivar en build: true cuando se haga la traducción definitiva
 
 markdown_extensions:
   - admonition
