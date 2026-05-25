@@ -8,24 +8,6 @@ El **Blue Spot Analysis 2.0 (BSA 2.0)** es una metodología y herramienta desarr
 
 ---
 
-## ¿Qué preguntas responde el BSA 2.0?
-
-- ¿Qué tramos viales concentran el mayor riesgo por inundación, sismo u otras amenazas?
-- ¿Cuál es el Daño Anual Esperado (DAE) y la Pérdida Anual Esperada (PAE) de la red evaluada?
-- ¿Qué inversiones reducirían más el riesgo con los recursos disponibles?
-- ¿Cómo se compara el riesgo entre distintos tipos de activos (carreteras, puentes, túneles, drenaje)?
-
----
-
-## ¿A quién va dirigida esta documentación?
-
-| Perfil | Qué encontrará aquí |
-|--------|---------------------|
-| **Usuario técnico** — especialistas en riesgo, unidades SIG, consultores | Metodología detallada, estructura de datos, guía de uso de la herramienta |
-| **Usuario estratégico** — ministerios, gerentes de proyecto, tomadores de decisión | Conceptos clave, interpretación de resultados, uso del dashboard |
-
----
-
 ## Cómo navegar la documentación
 
 <div class="grid cards" markdown>
@@ -79,6 +61,24 @@ El **Blue Spot Analysis 2.0 (BSA 2.0)** es una metodología y herramienta desarr
     [:octicons-arrow-right-24: Ver glosario](glosario/index.md)
 
 </div>
+
+---
+
+## ¿Qué preguntas responde el BSA 2.0?
+
+- ¿Qué tramos viales concentran el mayor riesgo por inundación, sismo u otras amenazas?
+- ¿Cuál es el Daño Anual Esperado (DAE) y la Pérdida Anual Esperada (PAE) de la red evaluada?
+- ¿Qué inversiones reducirían más el riesgo con los recursos disponibles?
+- ¿Cómo se compara el riesgo entre distintos tipos de activos (carreteras, puentes, túneles, drenaje)?
+
+---
+
+## ¿A quién va dirigida esta documentación?
+
+| Perfil | Qué encontrará aquí |
+|--------|---------------------|
+| **Usuario técnico** — especialistas en riesgo, unidades SIG, consultores | Metodología detallada, estructura de datos, guía de uso de la herramienta |
+| **Usuario estratégico** — ministerios, gerentes de proyecto, tomadores de decisión | Conceptos clave, interpretación de resultados, uso del dashboard |
 
 ---
 
