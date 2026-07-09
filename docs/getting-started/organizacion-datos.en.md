@@ -57,7 +57,7 @@ Vector layers representing the road infrastructure to be analyzed. They must be 
 
 ### Hazard grids
 
-GeoTIFF rasters containing the phenomenon intensity for each return period (Tr). They must follow the naming convention established in the input data sheet (see [Input data → Hazard grids](../guia-usuario/datos-entrada.md#b-mallas-de-amenaza)). The tool extracts the Tr value directly from the file name.
+GeoTIFF rasters containing the phenomenon intensity for each return period (Tr). They must follow the naming convention established in the input data sheet (see [Input data → Hazard grids](../guia-usuario/datos-entrada.md#b-hazard-grids)). The tool extracts the Tr value directly from the file name.
 
 ### Vulnerability databases
 

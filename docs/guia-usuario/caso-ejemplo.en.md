@@ -95,7 +95,7 @@ In the road layer, the `DAE_bridge`, `DAE_tunnel`, and `DAE_drainage` fields con
 
 1. Open `CostaRica.aprx` in ArcGIS Pro.
 2. In the Catalog panel, locate `BSA2.atbx` and open the **BSA2** tool.
-3. Load the parameters according to the example configuration table in [Configuring a run](configuracion-corrida.md#ejemplo-de-configuracion-costa-rica).
+3. Load the parameters according to the example configuration table in [Configuring a run](configuracion-corrida.md#configuration-example-costa-rica).
 4. Click **Run** and wait for completion.
 5. Compare the results with the fields of the existing `roads_results_*` layer in the geodatabase to validate reproducibility.
 
