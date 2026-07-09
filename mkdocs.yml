@@ -47,7 +47,40 @@ plugins:
           build: true
         - locale: en
           name: English
-          build: false  # Reactivar en build: true cuando se haga la traducción definitiva
+          build: true
+          nav_translations:
+            Inicio: Home
+            Metodología: Methodology
+            Introducción y antecedentes: Introduction and Background
+            Propósito, alcances y limitaciones: Purpose, Scope and Limitations
+            Conceptos clave: Key Concepts
+            Lógica funcional y arquitectura: Functional Logic and Architecture
+            Módulo de Amenaza: Hazard Module
+            Módulo de Exposición: Exposure Module
+            Módulo de Vulnerabilidad: Vulnerability Module
+            Módulo de Criticidad: Criticality Module
+            Cálculo de Riesgo: Risk Calculation
+            Estructura de datos: Data Structure
+            Primeros pasos: Getting Started
+            Requisitos: Requirements
+            Instalación: Installation
+            Organización de datos: Data Organization
+            Interfaz de la herramienta: Tool Interface
+            Guía de Usuario: User Guide
+            Flujo de trabajo: Workflow
+            Datos de entrada: Input Data
+            Configuración de una corrida: Configuring a Run
+            Resultados: Results
+            Caso de ejemplo: Case Study
+            Dashboard: Dashboard
+            Exploración de métricas: Metrics Exploration
+            Resultados por país: Results by Country
+            Recursos: Resources
+            Referencias: References
+            Preguntas frecuentes: FAQ
+            Glosario: Glossary
+            Diccionario de siglas: Acronym Dictionary
+            Licencia: License
 
 markdown_extensions:
   - admonition
