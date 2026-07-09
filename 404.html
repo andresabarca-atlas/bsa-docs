@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="es" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -13,6 +13,10 @@
       
       
       
+        
+          <link rel="alternate" href="/bsa-docs/recursos/referencias/" hreflang="es">
+        
+          <link rel="alternate" href="/bsa-docs/en/recursos/referencias/" hreflang="en">
         
       
       
@@ -84,8 +88,8 @@
   
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="/bsa-docs/." title="Blue Spot Analysis 2.0" class="md-header__button md-logo" aria-label="Blue Spot Analysis 2.0" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/bsa-docs/en/" title="Blue Spot Analysis 2.0" class="md-header__button md-logo" aria-label="Blue Spot Analysis 2.0" data-md-component="logo">
       
   <img src="/bsa-docs/assets/logo-bid.png" alt="logo">
 
@@ -141,6 +145,32 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/bsa-docs/recursos/referencias/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/bsa-docs/en/recursos/referencias/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       
       
@@ -152,16 +182,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -174,7 +204,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando búsqueda
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -189,7 +219,7 @@
   
     
       
-<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -199,13 +229,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="/bsa-docs/." class="md-tabs__link">
+      <a href="/bsa-docs/en/" class="md-tabs__link">
         
   
   
     
   
-  Inicio
+  Home
 
       </a>
     </li>
@@ -220,13 +250,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="/bsa-docs/metodologia/" class="md-tabs__link">
+        <a href="/bsa-docs/en/metodologia/" class="md-tabs__link">
           
   
   
     
   
-  Metodología
+  Methodology
 
         </a>
       </li>
@@ -242,13 +272,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="/bsa-docs/getting-started/" class="md-tabs__link">
+        <a href="/bsa-docs/en/getting-started/" class="md-tabs__link">
           
   
   
     
   
-  Primeros pasos
+  Getting Started
 
         </a>
       </li>
@@ -264,13 +294,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="/bsa-docs/guia-usuario/" class="md-tabs__link">
+        <a href="/bsa-docs/en/guia-usuario/" class="md-tabs__link">
           
   
   
     
   
-  Guía de Usuario
+  User Guide
 
         </a>
       </li>
@@ -286,7 +316,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/bsa-docs/dashboard/" class="md-tabs__link">
+        <a href="/bsa-docs/en/dashboard/" class="md-tabs__link">
           
   
   
@@ -308,13 +338,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="/bsa-docs/recursos/" class="md-tabs__link">
+        <a href="/bsa-docs/en/recursos/" class="md-tabs__link">
           
   
   
     
   
-  Recursos
+  Resources
 
         </a>
       </li>
@@ -330,13 +360,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="/bsa-docs/glosario/" class="md-tabs__link">
+        <a href="/bsa-docs/en/glosario/" class="md-tabs__link">
           
   
   
     
   
-  Glosario
+  Glossary
 
         </a>
       </li>
@@ -350,13 +380,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="/bsa-docs/licencia/" class="md-tabs__link">
+      <a href="/bsa-docs/en/licencia/" class="md-tabs__link">
         
   
   
     
   
-  Licencia
+  License
 
       </a>
     </li>
@@ -389,9 +419,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/bsa-docs/." title="Blue Spot Analysis 2.0" class="md-nav__button md-logo" aria-label="Blue Spot Analysis 2.0" data-md-component="logo">
+    <a href="/bsa-docs/en/" title="Blue Spot Analysis 2.0" class="md-nav__button md-logo" aria-label="Blue Spot Analysis 2.0" data-md-component="logo">
       
   <img src="/bsa-docs/assets/logo-bid.png" alt="logo">
 
@@ -408,14 +438,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/." class="md-nav__link">
+      <a href="/bsa-docs/en/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Inicio
+    Home
   
 
     
@@ -478,14 +508,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/bsa-docs/metodologia/" class="md-nav__link ">
+            <a href="/bsa-docs/en/metodologia/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Metodología
+    Methodology
   
 
     
@@ -507,7 +537,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Metodología
+    Methodology
   
 
           </label>
@@ -522,14 +552,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/metodologia/antecedentes/" class="md-nav__link">
+      <a href="/bsa-docs/en/metodologia/antecedentes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Introducción y antecedentes
+    Introduction and Background
   
 
     
@@ -550,14 +580,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/metodologia/proposito-alcances/" class="md-nav__link">
+      <a href="/bsa-docs/en/metodologia/proposito-alcances/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Propósito, alcances y limitaciones
+    Purpose, Scope and Limitations
   
 
     
@@ -578,14 +608,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/metodologia/conceptos-clave/" class="md-nav__link">
+      <a href="/bsa-docs/en/metodologia/conceptos-clave/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Conceptos clave
+    Key Concepts
   
 
     
@@ -606,14 +636,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/metodologia/arquitectura/" class="md-nav__link">
+      <a href="/bsa-docs/en/metodologia/arquitectura/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lógica funcional y arquitectura
+    Functional Logic and Architecture
   
 
     
@@ -634,14 +664,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/metodologia/modulo-amenaza/" class="md-nav__link">
+      <a href="/bsa-docs/en/metodologia/modulo-amenaza/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Módulo de Amenaza
+    Hazard Module
   
 
     
@@ -662,14 +692,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/metodologia/modulo-exposicion/" class="md-nav__link">
+      <a href="/bsa-docs/en/metodologia/modulo-exposicion/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Módulo de Exposición
+    Exposure Module
   
 
     
@@ -690,14 +720,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/metodologia/modulo-vulnerabilidad/" class="md-nav__link">
+      <a href="/bsa-docs/en/metodologia/modulo-vulnerabilidad/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Módulo de Vulnerabilidad
+    Vulnerability Module
   
 
     
@@ -718,14 +748,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/metodologia/modulo-criticidad/" class="md-nav__link">
+      <a href="/bsa-docs/en/metodologia/modulo-criticidad/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Módulo de Criticidad
+    Criticality Module
   
 
     
@@ -746,14 +776,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/metodologia/calculo-riesgo/" class="md-nav__link">
+      <a href="/bsa-docs/en/metodologia/calculo-riesgo/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Cálculo de Riesgo
+    Risk Calculation
   
 
     
@@ -774,14 +804,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/metodologia/estructura-datos/" class="md-nav__link">
+      <a href="/bsa-docs/en/metodologia/estructura-datos/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Estructura de datos
+    Data Structure
   
 
     
@@ -840,14 +870,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/bsa-docs/getting-started/" class="md-nav__link ">
+            <a href="/bsa-docs/en/getting-started/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Primeros pasos
+    Getting Started
   
 
     
@@ -869,7 +899,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Primeros pasos
+    Getting Started
   
 
           </label>
@@ -884,14 +914,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/getting-started/requisitos/" class="md-nav__link">
+      <a href="/bsa-docs/en/getting-started/requisitos/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Requisitos
+    Requirements
   
 
     
@@ -912,14 +942,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/getting-started/instalacion/" class="md-nav__link">
+      <a href="/bsa-docs/en/getting-started/instalacion/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Instalación
+    Installation
   
 
     
@@ -940,14 +970,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/getting-started/organizacion-datos/" class="md-nav__link">
+      <a href="/bsa-docs/en/getting-started/organizacion-datos/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Organización de datos
+    Data Organization
   
 
     
@@ -968,14 +998,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/getting-started/interfaz/" class="md-nav__link">
+      <a href="/bsa-docs/en/getting-started/interfaz/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Interfaz de la herramienta
+    Tool Interface
   
 
     
@@ -1036,14 +1066,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/bsa-docs/guia-usuario/" class="md-nav__link ">
+            <a href="/bsa-docs/en/guia-usuario/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Guía de Usuario
+    User Guide
   
 
     
@@ -1065,7 +1095,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Guía de Usuario
+    User Guide
   
 
           </label>
@@ -1080,14 +1110,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/guia-usuario/flujo-trabajo/" class="md-nav__link">
+      <a href="/bsa-docs/en/guia-usuario/flujo-trabajo/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Flujo de trabajo
+    Workflow
   
 
     
@@ -1108,14 +1138,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/guia-usuario/datos-entrada/" class="md-nav__link">
+      <a href="/bsa-docs/en/guia-usuario/datos-entrada/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Datos de entrada
+    Input Data
   
 
     
@@ -1136,14 +1166,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/guia-usuario/configuracion-corrida/" class="md-nav__link">
+      <a href="/bsa-docs/en/guia-usuario/configuracion-corrida/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configuración de una corrida
+    Configuring a Run
   
 
     
@@ -1164,14 +1194,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/guia-usuario/resultados/" class="md-nav__link">
+      <a href="/bsa-docs/en/guia-usuario/resultados/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Resultados
+    Results
   
 
     
@@ -1192,14 +1222,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/guia-usuario/caso-ejemplo/" class="md-nav__link">
+      <a href="/bsa-docs/en/guia-usuario/caso-ejemplo/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Caso de ejemplo
+    Case Study
   
 
     
@@ -1254,7 +1284,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/bsa-docs/dashboard/" class="md-nav__link ">
+            <a href="/bsa-docs/en/dashboard/" class="md-nav__link ">
               
   
   
@@ -1298,14 +1328,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/dashboard/exploracion-metricas/" class="md-nav__link">
+      <a href="/bsa-docs/en/dashboard/exploracion-metricas/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Exploración de métricas
+    Metrics Exploration
   
 
     
@@ -1326,14 +1356,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/dashboard/resultados-paises/" class="md-nav__link">
+      <a href="/bsa-docs/en/dashboard/resultados-paises/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Resultados por país
+    Results by Country
   
 
     
@@ -1388,14 +1418,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/bsa-docs/recursos/" class="md-nav__link ">
+            <a href="/bsa-docs/en/recursos/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Recursos
+    Resources
   
 
     
@@ -1417,7 +1447,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Recursos
+    Resources
   
 
           </label>
@@ -1432,14 +1462,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/recursos/referencias/" class="md-nav__link">
+      <a href="/bsa-docs/en/recursos/referencias/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Referencias
+    References
   
 
     
@@ -1460,14 +1490,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/recursos/faq/" class="md-nav__link">
+      <a href="/bsa-docs/en/recursos/faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Preguntas frecuentes
+    FAQ
   
 
     
@@ -1520,14 +1550,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/bsa-docs/glosario/" class="md-nav__link ">
+            <a href="/bsa-docs/en/glosario/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Glosario
+    Glossary
   
 
     
@@ -1549,7 +1579,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Glosario
+    Glossary
   
 
           </label>
@@ -1564,14 +1594,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/glosario/siglas/" class="md-nav__link">
+      <a href="/bsa-docs/en/glosario/siglas/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Diccionario de siglas
+    Acronym Dictionary
   
 
     
@@ -1599,14 +1629,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/bsa-docs/licencia/" class="md-nav__link">
+      <a href="/bsa-docs/en/licencia/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Licencia
+    License
   
 
     
@@ -1632,7 +1662,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1660,7 +1690,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Volver al principio
+  Back to top
 </button>
         
       </main>
@@ -1694,7 +1724,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/bsa-docs/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "/bsa-docs/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "/bsa-docs/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "/bsa-docs/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="/bsa-docs/assets/javascripts/bundle.79ae519e.min.js"></script>
