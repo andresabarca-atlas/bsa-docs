@@ -1,7 +1,7 @@
 # Blue Spot Analysis 2.0
 
 <div style="text-align:center; margin-bottom: 1.5rem;">
-  <img src="assets/logo-bid.png" alt="Inter-American Development Bank" style="max-height: 80px;">
+  <img src="../assets/logo-bid.png" alt="Inter-American Development Bank" style="max-height: 80px;">
 </div>
 
 The **Blue Spot Analysis 2.0 (BSA 2.0)** is a methodology and tool developed by the Inter-American Development Bank (IDB) to **prioritize investments in transport infrastructure** against natural hazards. It combines hazard, exposure, vulnerability, and criticality analysis of road networks to estimate risk and generate priority asset rankings at national or regional scale.
