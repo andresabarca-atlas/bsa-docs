@@ -504,8 +504,6 @@
       
         
       
-        
-      
     
     
     
@@ -819,34 +817,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../metodologia/priorizacion/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Priorización
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../metodologia/estructura-datos/" class="md-nav__link">
         
   
@@ -1078,10 +1048,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#recomendaciones" class="md-nav__link">
+  <a href="#estructura-de-carpetas-recomendada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Recomendaciones
+        Estructura de carpetas recomendada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-sobre-cada-grupo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas sobre cada grupo de datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notas sobre cada grupo de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capas-de-exposicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capas de exposición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mallas-de-amenaza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mallas de amenaza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos-de-vulnerabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bases de datos de vulnerabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos-de-operaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bases de datos de operaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consejos-de-gestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consejos de gestión
       
     </span>
   </a>
@@ -1782,10 +1824,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#recomendaciones" class="md-nav__link">
+  <a href="#estructura-de-carpetas-recomendada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Recomendaciones
+        Estructura de carpetas recomendada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-sobre-cada-grupo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas sobre cada grupo de datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notas sobre cada grupo de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capas-de-exposicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capas de exposición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mallas-de-amenaza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mallas de amenaza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos-de-vulnerabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bases de datos de vulnerabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos-de-operaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bases de datos de operaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consejos-de-gestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consejos de gestión
       
     </span>
   </a>
@@ -1810,31 +1924,69 @@
 
 
 <h1 id="organizacion-de-datos">Organización de datos<a class="headerlink" href="#organizacion-de-datos" title="Permanent link">&para;</a></h1>
-<p>Mantenga una copia inmutable de los insumos y separe datos, configuración, resultados y metadatos.</p>
-<div class="highlight"><pre><span></span><code>proyecto_bsa2/
-├── 01_exposicion/
-├── 02_amenaza/
-│   ├── river/
-│   ├── coast/
-│   ├── tsunami/
-│   ├── earthquake/
-│   └── liquefaction/
-├── 03_vulnerabilidad/
-├── 04_operaciones/
-├── 05_clima/
-├── 06_metadatos/
-└── 07_resultados/
+<p>Antes de ejecutar el BSA 2.0, es recomendable organizar todos los insumos en una estructura de carpetas predecible. Esto facilita la asignación de parámetros en el toolbox y permite reproducir el análisis de forma ordenada.</p>
+<h2 id="estructura-de-carpetas-recomendada">Estructura de carpetas recomendada<a class="headerlink" href="#estructura-de-carpetas-recomendada" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>&lt;Proyecto&gt;/
+│
+├── &lt;Proyecto&gt;.aprx              ← Proyecto de ArcGIS Pro
+├── BSA2.atbx                    ← Toolbox de la herramienta
+├── BSA2.py                      ← Script del toolbox (no modificar)
+│
+├── Exposure/                    ← Capas de exposición (inventarios de activos)
+│   ├── roads.shp                ← Red vial (polilíneas)
+│   ├── bridges.shp              ← Puentes (puntos)
+│   ├── tunnels.shp              ← Túneles (puntos)
+│   └── drainage.shp             ← Drenajes / alcantarillas (puntos)
+│
+├── Hazard/                      ← Mallas ráster de amenaza (GeoTIFF)
+│   ├── ri_h_&lt;país&gt;_10.tif       ← Inundación fluvial, Tr = 10 años
+│   ├── ri_h_&lt;país&gt;_25.tif
+│   ├── ri_h_&lt;país&gt;_100.tif
+│   ├── ri_h_&lt;país&gt;_500.tif
+│   ├── c_h_&lt;país&gt;_10.tif        ← Inundación pluvial/costera
+│   ├── EQ_&lt;país&gt;_PGA_475.tif    ← Sismo (PGA)
+│   ├── ts_&lt;país&gt;_500.tif        ← Tsunami
+│   └── li_&lt;país&gt;.tif            ← Licuefacción (un único ráster)
+│
+├── Vulnerability/               ← Bases de datos de vulnerabilidad
+│   └── FVU_BSA_V3.csv           ← Funciones de vulnerabilidad (daño físico + tránsito)
+│
+├── Operations/                  ← Bases de datos de operaciones y economía
+│   ├── OCO_BSA_&lt;país&gt;_V1.csv    ← Costos operativos por taxonomía de vehículo
+│   └── GDP_capita_&lt;país&gt;.csv    ← PIB per cápita por unidad territorial (opcional)
+│
+└── BSA2.gdb/                    ← Geodatabase de resultados (generada automáticamente)
+    ├── roads_results_&lt;stamp&gt;
+    ├── bridges_results_&lt;stamp&gt;
+    ├── tunnels_results_&lt;stamp&gt;
+    └── drainage_results_&lt;stamp&gt;
 </code></pre></div>
-<h2 id="recomendaciones">Recomendaciones<a class="headerlink" href="#recomendaciones" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Geodatabase de resultados</p>
+<p>La carpeta <code>BSA2.gdb</code> y sus capas de resultados se generan automáticamente al ejecutar la herramienta, en el mismo directorio donde se encuentra <code>BSA2.py</code>. No es necesario crearla manualmente.</p>
+</div>
+<h2 id="notas-sobre-cada-grupo-de-datos">Notas sobre cada grupo de datos<a class="headerlink" href="#notas-sobre-cada-grupo-de-datos" title="Permanent link">&para;</a></h2>
+<h3 id="capas-de-exposicion">Capas de exposición<a class="headerlink" href="#capas-de-exposicion" title="Permanent link">&para;</a></h3>
+<p>Son las capas vectoriales que representan la infraestructura vial a analizar. Deben estar en formato shapefile y proyectadas en el mismo sistema de referencia que los rásters de amenaza.</p>
 <ul>
-<li>use rutas cortas, estables y sin caracteres problemáticos;</li>
-<li>no sobrescriba los insumos originales;</li>
-<li>guarde fuente, licencia, fecha, unidad, resolución y CRS;</li>
-<li>mantenga todos los costos en la misma moneda y año base;</li>
-<li>archive el archivo <code>.loc</code> y los mensajes de cada corrida;</li>
-<li>no mueva ni renombre archivos durante la ejecución.</li>
+<li><strong>Red vial</strong> (<code>roads.shp</code>): polilíneas. Cada tramo debe tener al menos los campos <code>ID_TRAMO</code>, <code>vul_f</code>, <code>vul_eq</code> y <code>rep_cost_k</code>. Ver <a href="../../guia-usuario/datos-entrada/">Datos de entrada</a> para la descripción completa de atributos.</li>
+<li><strong>Puentes</strong> (<code>bridges.shp</code>): puntos. Obligatorio si se quiere calcular DAE y PAE para puentes.</li>
+<li><strong>Túneles</strong> (<code>tunnels.shp</code>): puntos. Opcional; si no se provee, la herramienta lo omite.</li>
+<li><strong>Drenajes</strong> (<code>drainage.shp</code>): puntos. Opcional.</li>
 </ul>
-<p>El toolbox escribe la geodatabase de resultados y la carpeta <code>Loc</code> junto a su script. Confirme permisos de escritura y espacio disponible.</p>
+<h3 id="mallas-de-amenaza">Mallas de amenaza<a class="headerlink" href="#mallas-de-amenaza" title="Permanent link">&para;</a></h3>
+<p>Rásters GeoTIFF que contienen la intensidad del fenómeno para cada período de retorno (Tr). Deben seguir la convención de nombres establecida en la ficha de datos de entrada (ver <a href="../../guia-usuario/datos-entrada/#b-mallas-de-amenaza">Datos de entrada → Mallas de amenaza</a>). La herramienta extrae el valor de Tr directamente del nombre del archivo.</p>
+<h3 id="bases-de-datos-de-vulnerabilidad">Bases de datos de vulnerabilidad<a class="headerlink" href="#bases-de-datos-de-vulnerabilidad" title="Permanent link">&para;</a></h3>
+<p>El archivo <code>FVU_BSA_V3.csv</code> contiene las funciones de vulnerabilidad en formato de texto. Consulte <a href="../../guia-usuario/datos-entrada/">Datos de entrada → Vulnerabilidad y recuperación</a> para el formato detallado.</p>
+<h3 id="bases-de-datos-de-operaciones">Bases de datos de operaciones<a class="headerlink" href="#bases-de-datos-de-operaciones" title="Permanent link">&para;</a></h3>
+<p>Los archivos de costos operativos y PIB per cápita son necesarios para el cálculo de PAE (pérdidas funcionales por disrupción del tránsito). Si no se proveen, la herramienta calculará solo el DAE (daño físico).</p>
+<h2 id="consejos-de-gestion">Consejos de gestión<a class="headerlink" href="#consejos-de-gestion" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Mantenga todos los rásters de una misma amenaza en la misma subcarpeta para facilitar la selección múltiple en el toolbox.</li>
+<li>Evite espacios en los nombres de archivos y carpetas.</li>
+<li>Use nombres descriptivos que incluyan el país y el período de retorno (por ejemplo, <code>ri_h_CR_100.tif</code>), tal como lo exige la convención de la herramienta.</li>
+<li>La carpeta <code>Loc/</code> (generada automáticamente junto a <code>BSA2.gdb/</code>) almacena los archivos <code>.loc</code> con la configuración de cada corrida ejecutada. Guárdelos como registro de trazabilidad.</li>
+</ul>
 
 
 

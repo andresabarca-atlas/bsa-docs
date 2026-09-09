@@ -506,8 +506,6 @@
       
         
       
-        
-      
     
     
     
@@ -804,34 +802,6 @@
     
   
     Cálculo de Riesgo
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="priorizacion/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Priorización
   
 
     
@@ -1724,10 +1694,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#principios-de-aplicacion" class="md-nav__link">
+  <a href="#los-cuatro-componentes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Principios de aplicación
+        Los cuatro componentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-general-de-la-metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo general de la metodología
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paises-de-implementacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Países de implementación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secciones-de-esta-guia-metodologica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secciones de esta guía metodológica
       
     </span>
   </a>
@@ -1752,63 +1755,123 @@
 
 
 <h1 id="metodologia-bsa-20">Metodología BSA 2.0<a class="headerlink" href="#metodologia-bsa-20" title="Permanent link">&para;</a></h1>
-<p>La metodología organiza el análisis en siete componentes conectados. Cada capítulo explica primero la lógica de cálculo y luego el contrato de datos que debe cumplir el usuario.</p>
+<p>El <strong>Blue Spot Analysis 2.0</strong> (BSA 2.0) es una herramienta de evaluación y priorización de riesgos para infraestructura de transporte ante amenazas naturales. Desarrollada por el Banco Interamericano de Desarrollo (BID), combina cuatro componentes analíticos para estimar, en términos económicos, el riesgo al que está expuesta una red vial nacional o regional.</p>
+<p>La metodología adopta un <strong>enfoque probabilista simplificado</strong>: en lugar de simular catálogos exhaustivos de eventos, parte de mallas de intensidad de amenaza asociadas a períodos de retorno discretos, y estima el daño y la pérdida esperados mediante integración numérica. Este balance entre rigor técnico y viabilidad operativa la hace aplicable en contextos con disponibilidad variable de datos, que es la situación habitual en América Latina y el Caribe.</p>
+<h2 id="los-cuatro-componentes">Los cuatro componentes<a class="headerlink" href="#los-cuatro-componentes" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>Componente</th>
-<th>Pregunta</th>
-<th>Resultado principal</th>
+<th>Pregunta que responde</th>
+<th>Métrica principal</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Amenaza</td>
-<td>¿Con qué intensidad y probabilidad puede ocurrir cada fenómeno?</td>
-<td>Mallas de intensidad por amenaza y período de retorno.</td>
+<td><strong>Amenaza</strong></td>
+<td>¿Qué tan intenso y frecuente es el fenómeno?</td>
+<td>Intensidad por período de retorno (TH, V, PGA…)</td>
 </tr>
 <tr>
-<td>Exposición</td>
-<td>¿Qué activos integran la red analizada?</td>
-<td>Carreteras, puentes, túneles y drenajes georreferenciados.</td>
+<td><strong>Exposición</strong></td>
+<td>¿Qué infraestructura está en la zona de impacto?</td>
+<td>Inventario georeferenciado + valor económico (VFi, VFt)</td>
 </tr>
 <tr>
-<td>Vulnerabilidad</td>
-<td>¿Qué daño e interrupción produce cada intensidad?</td>
-<td>Relaciones intensidad–RMD e intensidad–tiempo.</td>
+<td><strong>Vulnerabilidad</strong></td>
+<td>¿Cuánto se daña un activo ante determinada intensidad?</td>
+<td>Relación Media de Daño — RMD (% del valor físico)</td>
 </tr>
 <tr>
-<td>Criticidad</td>
-<td>¿Qué consecuencia funcional genera interrumpir un tramo?</td>
-<td>Costo diario de desvío o de viajes no realizados.</td>
-</tr>
-<tr>
-<td>Riesgo</td>
-<td>¿Cuánto daño y pérdida se espera anualmente?</td>
-<td>DAE y PAE.</td>
-</tr>
-<tr>
-<td>Priorización</td>
-<td>¿Dónde se concentran las consecuencias económicas?</td>
-<td><code>Priority = DAE_total + PAE_total</code>.</td>
-</tr>
-<tr>
-<td>Tablero</td>
-<td>¿Cómo se consultan y comunican los resultados?</td>
-<td>Mapas, filtros, gráficos y fichas.</td>
+<td><strong>Criticidad</strong></td>
+<td>¿Cuán importante es ese activo para la red?</td>
+<td>Puntaje multicriterio (flujo, redundancia, accesibilidad)</td>
 </tr>
 </tbody>
 </table>
-<p><img alt="Componentes de cálculo y resultados del BSA 2.0" src="../assets/bsa2/componentes-calculo.png" /></p>
-<h2 id="principios-de-aplicacion">Principios de aplicación<a class="headerlink" href="#principios-de-aplicacion" title="Permanent link">&para;</a></h2>
+<p>La integración de estos cuatro componentes produce dos familias de métricas de riesgo:</p>
 <ul>
-<li><strong>Trazabilidad:</strong> conservar fuente, versión, fecha y transformaciones de cada insumo.</li>
-<li><strong>Comparabilidad:</strong> aplicar reglas homogéneas dentro del universo analizado.</li>
-<li><strong>Modularidad:</strong> actualizar componentes sin perder las interfaces de datos.</li>
-<li><strong>Adecuación:</strong> no atribuir a los resultados mayor precisión que a sus insumos.</li>
-<li><strong>Interpretación responsable:</strong> usar los resultados como apoyo, no como diseño definitivo.</li>
+<li><strong>DAE — Daño Anual Esperado</strong> (<em>EAD</em>): daño físico directo a la infraestructura, expresado en unidades monetarias por año.</li>
+<li><strong>PAE — Pérdida Anual Esperada</strong> (<em>EAL</em>): pérdida económica por interrupción del servicio o del tránsito, expresada en unidades monetarias por año.</li>
 </ul>
-<p>Todos los insumos espaciales deben estar en coordenadas geográficas WGS 84, <strong><code>EPSG:4326</code></strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Distinción fundamental</p>
+<p><em>Daño</em> y <em>pérdida</em> no son sinónimos en el BSA 2.0. El <strong>daño</strong> es físico (costo de reposición del activo). La <strong>pérdida</strong> es funcional (costo económico de la interrupción del tránsito). Esta diferencia es esencial para interpretar correctamente los resultados y priorizar intervenciones.</p>
+</div>
+<h2 id="flujo-general-de-la-metodologia">Flujo general de la metodología<a class="headerlink" href="#flujo-general-de-la-metodologia" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+    A[Mapas de amenaza\npor período de retorno] --&gt; E[Elemento Expuesto\n― EE ―]
+    B[Inventario vial\nExposición] --&gt; E
+    C[Funciones de\nVulnerabilidad] --&gt; E
+    D[Análisis de\nCriticidad] --&gt; E
+
+    E --&gt; F{Cálculo por\nelemento y Tr}
+
+    F --&gt; G[Daño físico\nDMVi × VFi]
+    F --&gt; H[Pérdida funcional\nPMVt × VFt]
+
+    G --&gt; I[Agregación por Tr]
+    H --&gt; I
+
+    I --&gt; J[Curva de Excedencia\nde Pérdidas — CEP]
+    J --&gt; K[DAE / PAE]
+    J --&gt; L[PML\nTr = 500 años]
+
+    K --&gt; M[Mapas de riesgo\nRankings de priorización]
+    L --&gt; M</code></pre>
+<p><em>Fuente: elaboración propia a partir del Concept Report BSA 2.0 (BID, 2025).</em></p>
+<h2 id="paises-de-implementacion">Países de implementación<a class="headerlink" href="#paises-de-implementacion" title="Permanent link">&para;</a></h2>
+<p>El BSA 2.0 está actualmente implementado en tres países:</p>
+<ul>
+<li><strong>República Dominicana</strong> — caso de referencia, base del dashboard en línea.</li>
+<li><strong>Costa Rica</strong> — segunda implementación.</li>
+<li><strong>El Salvador</strong> — tercera implementación.</li>
+</ul>
+<h2 id="secciones-de-esta-guia-metodologica">Secciones de esta guía metodológica<a class="headerlink" href="#secciones-de-esta-guia-metodologica" title="Permanent link">&para;</a></h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 8H12v5l4.28 2.54.72-1.21-3.5-2.08zM13 3a9 9 0 0 0-9 9H1l3.96 4.03L9 12H6a7 7 0 0 1 7-7 7 7 0 0 1 7 7 7 7 0 0 1-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.9 8.9 0 0 0 13 21a9 9 0 0 0 9-9 9 9 0 0 0-9-9"/></svg></span> <strong><a href="antecedentes/">Antecedentes</a></strong><br />
+  Origen del BSA (Danish Road Directorate, proyecto SWAMP) y evolución hacia el BSA 2.0.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 2v2.07A8 8 0 0 0 4.07 11H2v2h2.07A8 8 0 0 0 11 19.93V22h2v-2.07A8 8 0 0 0 19.93 13H22v-2h-2.07A8 8 0 0 0 13 4.07V2m-2 4.08V8h2V6.09c2.5.41 4.5 2.41 4.92 4.91H16v2h1.91c-.41 2.5-2.41 4.5-4.91 4.92V16h-2v1.91C8.5 17.5 6.5 15.5 6.08 13H8v-2H6.09C6.5 8.5 8.5 6.5 11 6.08M12 11a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> <strong><a href="proposito-alcances/">Propósito y alcances</a></strong><br />
+  Preguntas que responde la herramienta, escalas de aplicación y limitaciones.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg></span> <strong><a href="conceptos-clave/">Conceptos clave</a></strong><br />
+  Glosario técnico: amenaza, exposición, vulnerabilidad, criticidad, DAE, PAE, PML, períodos de retorno.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6h-2v-3c0-1.11-.89-2-2-2h-6V8h2V2z"/></svg></span> <strong><a href="arquitectura/">Arquitectura y módulos</a></strong><br />
+  Lógica funcional por módulos y flujo de cálculo completo.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 6.79c1.86 1.07 3 3.06 3 5.21C18 22 6 22 6 22c1.25-.94 2.38-2.05 3.34-3.29a.99.99 0 0 0-.34-1.5C7.14 16.14 6 14.15 6 12 6 2 18 2 18 2c-1.25.94-2.38 2.05-3.34 3.29a.99.99 0 0 0 .34 1.5M12 14a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2"/></svg></span> <strong><a href="modulo-amenaza/">Módulo de Amenaza</a></strong><br />
+  Tipos de amenaza implementados y metodología de representación.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 16h2v4h-2m0-10h2v4h-2m0-10h2v4h-2M4 22h16V2H4z"/></svg></span> <strong><a href="modulo-exposicion/">Módulo de Exposición</a></strong><br />
+  Caracterización, segmentación y valoración de la infraestructura.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.96 11.31C10.82 8.1 11.5 6 13 6s2.18 2.1 3.04 5.31C17 14.92 18.1 19 22 19v-2c-2.2 0-3-2.46-4.03-6.2C17.08 7.46 16.15 4 13 4s-4.08 3.46-4.97 6.8C7.03 14.54 6.2 17 4 17V2H2v20h20v-2H4v-1c3.9 0 5-4.08 5.96-7.69"/></svg></span> <strong><a href="modulo-vulnerabilidad/">Módulo de Vulnerabilidad</a></strong><br />
+  Funciones de vulnerabilidad y librería modular de daño.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a2 2 0 0 1-2-2 2 2 0 0 1 2-2c1.11 0 2 .89 2 2a2 2 0 0 1-2 2m0 5a2 2 0 0 1-2-2 2 2 0 0 1 2-2c1.11 0 2 .89 2 2a2 2 0 0 1-2 2m0 5a2 2 0 0 1-2-2 2 2 0 0 1 2-2c1.11 0 2 .89 2 2a2 2 0 0 1-2 2m8-9h-3V8.86c1.72-.45 3-2 3-3.86h-3V4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v1H4c0 1.86 1.28 3.41 3 3.86V10H4c0 1.86 1.28 3.41 3 3.86V15H4c0 1.86 1.28 3.41 3 3.86V20a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1.14c1.72-.45 3-2 3-3.86h-3v-1.14c1.72-.45 3-2 3-3.86"/></svg></span> <strong><a href="modulo-criticidad/">Módulo de Criticidad</a></strong><br />
+  Análisis multicriterio de importancia de la red vial.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m0 2v4h10V4zm0 6v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2z"/></svg></span> <strong><a href="calculo-riesgo/">Cálculo de Riesgo</a></strong><br />
+  Modelo probabilista simplificado: DAE, PAE, CEP y PML.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg></span> <strong><a href="estructura-datos/">Estructura de datos</a></strong><br />
+  Modelo relacional, tablas y campos del sistema.</p>
+</li>
+</ul>
+</div>
 
 
 

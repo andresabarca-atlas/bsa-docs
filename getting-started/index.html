@@ -504,8 +504,6 @@
       
         
       
-        
-      
     
     
     
@@ -799,34 +797,6 @@
     
   
     Cálculo de Riesgo
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../metodologia/priorizacion/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Priorización
   
 
     
@@ -1724,10 +1694,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#antes-de-la-primera-corrida" class="md-nav__link">
+  <a href="#fases-de-acceso" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Antes de la primera corrida
+        Fases de acceso
       
     </span>
   </a>
@@ -1735,10 +1705,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acceso" class="md-nav__link">
+  <a href="#contenido-de-esta-seccion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Acceso
+        Contenido de esta sección
       
     </span>
   </a>
@@ -1763,21 +1733,69 @@
 
 
 <h1 id="primeros-pasos">Primeros pasos<a class="headerlink" href="#primeros-pasos" title="Permanent link">&para;</a></h1>
-<p>BSA 2.0 se ejecuta en ArcGIS Pro como una herramienta de geoprocesamiento. Para comenzar necesita el paquete vigente, una licencia válida, permisos de escritura y los insumos preparados conforme a esta documentación.</p>
-<h2 id="antes-de-la-primera-corrida">Antes de la primera corrida<a class="headerlink" href="#antes-de-la-primera-corrida" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Compruebe los <a href="requisitos/">requisitos del sistema</a>.</li>
-<li>Agregue el toolbox según la guía de <a href="instalacion/">instalación</a>.</li>
-<li>Ordene y congele los archivos de <a href="organizacion-datos/">entrada</a>.</li>
-<li>Revise todas las etiquetas de la <a href="interfaz/">interfaz</a>.</li>
-<li>Ejecute primero un subconjunto pequeño y verificable.</li>
-</ol>
-<h2 id="acceso">Acceso<a class="headerlink" href="#acceso" title="Permanent link">&para;</a></h2>
-<p>El toolbox y los datos pueden estar sujetos a canales y permisos institucionales. Solicite al responsable del proyecto la versión autorizada de <code>BSA2.atbx</code>, <code>BSA2.py</code> y las bases asociadas. Esta web documenta su uso, pero no implica acceso automático a datos restringidos.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>No use una copia cuyo script y toolbox pertenezcan a versiones diferentes. Registre la versión usada en cada análisis.</p>
+<p>El BSA 2.0 es una herramienta de escritorio que corre dentro de <strong>ArcGIS Pro</strong> como un <em>geoprocessing toolbox</em>. Para comenzar a trabajar con ella es necesario contar con el software base, los datos de entrada correctamente organizados y el toolbox instalado en el proyecto ArcGIS Pro.</p>
+<p>Esta sección describe todo lo que se necesita antes de la primera ejecución.</p>
+<h2 id="fases-de-acceso">Fases de acceso<a class="headerlink" href="#fases-de-acceso" title="Permanent link">&para;</a></h2>
+<p>La distribución del BSA 2.0 sigue un esquema de liberación progresiva:</p>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Estado</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Alfa interno</strong></td>
+<td>Activo</td>
+<td>Disponible exclusivamente para el equipo técnico del BID y consultores directos del proyecto. Acceso por coordinación directa con el equipo.</td>
+</tr>
+<tr>
+<td><strong>Beta — distribución controlada</strong></td>
+<td>Próximamente</td>
+<td>Acceso para unidades gubernamentales seleccionadas y socios técnicos bajo acuerdo de uso con el BID.</td>
+</tr>
+<tr>
+<td><strong>Versión estable</strong></td>
+<td>A futuro</td>
+<td>Disponible para el público técnico conforme al marco de licencia del BID (AM-331-A3).</td>
+</tr>
+</tbody>
+</table>
+<!-- COMPLETAR: enlace de descarga (a futuro) -->
+
+<div class="admonition note">
+<p class="admonition-title">Acceso actual</p>
+<p>En la etapa Alfa, el toolbox se distribuye directamente a través del equipo de proyecto. Para solicitar acceso, contacte a <strong>María Alejandra Escovar</strong> (MARIAESC@IADB.ORG).</p>
 </div>
+<h2 id="contenido-de-esta-seccion">Contenido de esta sección<a class="headerlink" href="#contenido-de-esta-seccion" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Página</th>
+<th>Qué encontrarás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="requisitos/">Requisitos del sistema</a></td>
+<td>Software, hardware y conocimientos previos necesarios para usar el BSA 2.0.</td>
+</tr>
+<tr>
+<td><a href="instalacion/">Instalación</a></td>
+<td>Pasos para instalar ArcGIS Pro, el toolbox <code>BSA2.atbx</code> y configurar el entorno Python.</td>
+</tr>
+<tr>
+<td><a href="organizacion-datos/">Organización de datos</a></td>
+<td>Estructura de carpetas recomendada para capas de exposición, mallas de amenaza y bases de datos.</td>
+</tr>
+<tr>
+<td><a href="interfaz/">Interfaz de la herramienta</a></td>
+<td>Descripción de cada parámetro del toolbox <code>BSA2</code> en ArcGIS Pro.</td>
+</tr>
+</tbody>
+</table>
 
 
 

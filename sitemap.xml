@@ -197,13 +197,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://andresabarca-atlas.github.io/bsa-docs/en/metodologia/modulo-vulnerabilidad/"/>
     </url>
     <url>
-        <loc>https://andresabarca-atlas.github.io/bsa-docs/metodologia/priorizacion/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://andresabarca-atlas.github.io/bsa-docs/metodologia/priorizacion/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://andresabarca-atlas.github.io/bsa-docs/en/metodologia/priorizacion/"/>
-    </url>
-    <url>
         <loc>https://andresabarca-atlas.github.io/bsa-docs/metodologia/proposito-alcances/</loc>
         <lastmod>2026-09-09</lastmod>
         <changefreq>daily</changefreq>
@@ -426,13 +419,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://andresabarca-atlas.github.io/bsa-docs/en/metodologia/modulo-vulnerabilidad/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://andresabarca-atlas.github.io/bsa-docs/metodologia/modulo-vulnerabilidad/"/>
-    </url>
-    <url>
-        <loc>https://andresabarca-atlas.github.io/bsa-docs/en/metodologia/priorizacion/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://andresabarca-atlas.github.io/bsa-docs/en/metodologia/priorizacion/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://andresabarca-atlas.github.io/bsa-docs/metodologia/priorizacion/"/>
     </url>
     <url>
         <loc>https://andresabarca-atlas.github.io/bsa-docs/en/metodologia/proposito-alcances/</loc>
