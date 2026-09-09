@@ -16,7 +16,7 @@ Esta página describe los pasos para instalar ArcGIS Pro, agregar el toolbox `BS
 
 ## 2. Crear o abrir un proyecto ArcGIS Pro
 
-1. Abra ArcGIS Pro y cree un nuevo proyecto (**New → Map**) o abra el proyecto autorizado para el análisis.
+1. Abra ArcGIS Pro y cree un nuevo proyecto (**New → Map**) o abra uno existente (por ejemplo, `CostaRica.aprx` si está trabajando con los datos de referencia).
 2. Defina una carpeta de trabajo donde almacenará los datos de entrada y los resultados. Consulte [Organización de datos](organizacion-datos.md) para la estructura recomendada.
 
 ## 3. Agregar el toolbox BSA2.atbx
@@ -56,7 +56,5 @@ Confirme que la instalación es correcta antes de la primera ejecución:
 - [ ] ArcGIS Pro 3.2.x instalado y con sesión activa.
 - [ ] Extensión Spatial Analyst activada.
 - [ ] `BSA2.atbx` visible en el panel Catalog de su proyecto.
-- [ ] La ventana de Python responde correctamente (paso 4).
+- [ ] Python Window responde correctamente (paso 4).
 - [ ] Datos de entrada organizados según la estructura recomendada (ver [Organización de datos](organizacion-datos.md)).
-- [ ] Todas las capas espaciales están en WGS 84, `EPSG:4326`.
-- [ ] La carpeta del toolbox permite crear `BSA2.gdb` y la carpeta `Loc`.

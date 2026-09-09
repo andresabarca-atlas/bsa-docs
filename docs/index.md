@@ -1,35 +1,156 @@
 # Blue Spot Analysis 2.0
 
-El **Blue Spot Analysis 2.0 (BSA 2.0)** es una herramienta de cribado para estimar y comparar las consecuencias económicas esperadas del daño físico y de la interrupción funcional de una red vial. Integra información preparada por el usuario y produce resultados comparables por tramo para apoyar estudios, mantenimiento e inversiones de resiliencia.
+<div style="text-align:center; margin-bottom: 1.5rem;">
+  <img src="assets/logo-bid.png" alt="Banco Interamericano de Desarrollo" style="max-height: 80px;">
+</div>
 
-!!! important "Qué hace —y qué no hace— el BSA 2.0"
-    El BSA 2.0 **no genera** modelos de amenaza, inventarios de exposición ni funciones de vulnerabilidad; tampoco produce datos de tránsito, costos o parámetros macroeconómicos. El usuario debe preparar, documentar y validar estos insumos conforme a los formatos, nombres, unidades, taxonomías y sistema de referencia indicados en esta documentación. La herramienta los integra y ejecuta el flujo de cálculo, pero no certifica su calidad científica.
+El **Blue Spot Analysis 2.0 (BSA 2.0)** es una metodología y herramienta desarrollada por el Banco Interamericano de Desarrollo (BID) para **priorizar inversiones en infraestructura de transporte** ante amenazas naturales. Combina análisis de amenaza, exposición, vulnerabilidad y criticidad de la red vial para estimar el riesgo y generar rankings de activos prioritarios a escala nacional o regional.
 
-![Flujo general de los componentes del BSA 2.0](assets/bsa2/flujo-general.png)
+---
 
-## Enfoque metodológico
+## Cómo navegar la documentación
 
-El BSA 2.0 emplea una **evaluación probabilística simplificada del riesgo de desastres**. Para cada período de retorno combina intensidad, exposición y vulnerabilidad; estima daños físicos y pérdidas por interrupción; e integra las consecuencias discretas para calcular:
+<div class="grid cards" markdown>
 
-- **DAE:** daño anual esperado por afectación física y reposición.
-- **PAE:** pérdida anual esperada asociada a la interrupción del tránsito.
-- **Prioridad:** suma directa `DAE_total + PAE_total`, expresada en la misma moneda por año.
+-   :material-map-clock:{ .lg .middle } **Metodología**
 
-El enfoque es coherente con los principios de la metodología del BID para evaluación del riesgo de desastres y cambio climático, pero no constituye un catálogo estocástico completo ni propaga todas las fuentes de incertidumbre.
+    ---
 
-## Implementación
+    Marco conceptual completo: amenaza, exposición, vulnerabilidad, criticidad y cálculo de riesgo.
 
-La herramienta está desarrollada en **Python con ArcPy** y se distribuye como un toolbox para **ArcGIS Pro** (`BSA2.atbx`). Opera sobre capas ráster y vectoriales, archivos CSV y parámetros numéricos. Los resultados se guardan como clases de entidad en una geodatabase y pueden publicarse posteriormente en el tablero de control.
+    [:octicons-arrow-right-24: Ver metodología](metodologia/index.md)
 
-## Recorrido recomendado
+-   :material-rocket-launch:{ .lg .middle } **Primeros pasos**
 
-1. Consulte la [metodología](metodologia/index.md) y sus supuestos.
-2. Verifique los [requisitos del sistema](getting-started/requisitos.md).
-3. Prepare los insumos según la [estructura de datos](metodologia/estructura-datos.md).
-4. Revise cada campo de la [interfaz del toolbox](getting-started/interfaz.md).
-5. Ejecute el [flujo de trabajo](guia-usuario/flujo-trabajo.md) y valide los [resultados](guia-usuario/resultados.md).
-6. Publique y explore los resultados en el [dashboard](dashboard/index.md).
+    ---
 
-!!! warning "Uso de los resultados"
-    El BSA 2.0 orienta la comparación y el cribado de activos. No sustituye estudios de ingeniería de detalle, inspecciones de campo, análisis costo-beneficio ni evaluaciones sociales y ambientales.
+    Requisitos, instalación de la herramienta y organización de los datos de entrada.
 
+    [:octicons-arrow-right-24: Comenzar](getting-started/index.md)
+
+-   :material-book-open-variant:{ .lg .middle } **Guía de Usuario**
+
+    ---
+
+    Flujo de trabajo paso a paso, configuración de una corrida y lectura de resultados.
+
+    [:octicons-arrow-right-24: Ver guía](guia-usuario/index.md)
+
+-   :material-monitor-dashboard:{ .lg .middle } **Dashboard**
+
+    ---
+
+    Interfaz en línea para visualizar resultados e interactuar con tomadores de decisión.
+
+    [:octicons-arrow-right-24: Explorar dashboard](dashboard/index.md)
+
+-   :material-download:{ .lg .middle } **Recursos**
+
+    ---
+
+    Referencias bibliográficas, preguntas frecuentes y materiales descargables.
+
+    [:octicons-arrow-right-24: Ver recursos](recursos/index.md)
+
+-   :material-alphabetical:{ .lg .middle } **Glosario**
+
+    ---
+
+    Definiciones de conceptos técnicos y diccionario de siglas.
+
+    [:octicons-arrow-right-24: Ver glosario](glosario/index.md)
+
+</div>
+
+---
+
+## ¿Qué preguntas responde el BSA 2.0?
+
+- ¿Qué tramos viales concentran el mayor riesgo por inundación, sismo u otras amenazas?
+- ¿Cuál es el Daño Anual Esperado (DAE) y la Pérdida Anual Esperada (PAE) de la red evaluada?
+- ¿Qué inversiones reducirían más el riesgo con los recursos disponibles?
+- ¿Cómo se compara el riesgo entre distintos tipos de activos (carreteras, puentes, túneles, drenaje)?
+
+---
+
+## ¿A quién va dirigida esta documentación?
+
+| Perfil | Qué encontrará aquí |
+|--------|---------------------|
+| **Usuario técnico** — especialistas en riesgo, unidades SIG, consultores | Metodología detallada, estructura de datos, guía de uso de la herramienta |
+| **Usuario estratégico** — ministerios, gerentes de proyecto, tomadores de decisión | Conceptos clave, interpretación de resultados, uso del dashboard |
+
+---
+
+## Equipo del proyecto
+
+### Liderazgo y gobernanza estratégica
+
+| Rol | Persona |
+|-----|---------|
+| Patrocinador Ejecutivo TSP — Líder del programa | **Manuel Rodríguez** |
+| Patrocinador Ejecutivo DRM — Líder del programa | **Ginés Suárez** |
+| Asesor operacional TSP | **Gonzalo Rodríguez Valverde** |
+| Asesor científico-económico senior | **Adrien Vogt-Schilb** |
+
+### Dirección del producto BSA 2.0
+
+| Rol | Persona |
+|-----|---------|
+| Coordinación general (DRM) — Dirección operativa | **María Alejandra Escovar** |
+| Líder técnico funcional — SME hidrometeorológico | **Juan Camilo Olaya** |
+| Coordinador técnico — Arquitectura y backend | **Kenneth Otárola** |
+
+### Equipos de ejecución
+
+??? note "Bloque A — Desarrollo técnico y modelación"
+
+    | Persona | Rol |
+    |---------|-----|
+    | **Andrés Abarca** | SME multiamenaza y apoyo técnico en Q/A |
+    | **María Carolina Rogelis** | Líder de QA técnico y revisión experta hidrometeorológica |
+    | **Walter Cortés** | Líder GIS full-stack y experiencia de usuario |
+    | **Roque Rodas** | Líder técnico de modelación de exposición de infraestructura vial |
+    | **Joel Deplaen** | Líder metodológico en criticidad, vulnerabilidad social y modelación de redes |
+
+??? note "Bloque B — Investigación, datos y módulos especializados"
+
+    | Persona | Rol |
+    |---------|-----|
+    | **Mariam Peña** | Especialista en investigación aplicada, SIG y módulo de cadenas de valor |
+    | **Empresa consultora (por definir)** | Líder del componente de vulnerabilidad de infraestructura vial |
+
+??? note "Bloque C — Adopción, articulación y aplicación en países"
+
+    | Persona | País / Rol |
+    |---------|-----------|
+    | **Benoit Lefevre** | República Dominicana — punto focal y sponsor operativo |
+    | **Fernando Quirós** | Costa Rica — especialista sectorial en exposición vial |
+    | **José Rodrigo Rendón** | El Salvador — punto focal y sponsor operativo |
+    | **Pablo Guerrero** | Trinidad y Tobago — punto focal y sponsor operativo |
+    | **Rodrigo Donoso** | Haití — punto focal y sponsor operativo |
+    | **Leydis** | Panamá — punto focal |
+
+??? note "Bloque D — Comunicación, difusión y diseño"
+
+    | Persona | Rol |
+    |---------|-----|
+    | **Mónica Gamboa** | Líder de comunicación estratégica y difusión |
+    | **Valmore Castillo** | Diseñador UX/UI y comunicación visual |
+
+---
+
+## Contacto
+
+**Punto de contacto del proyecto:**
+María Alejandra Escovar — [MARIAESC@IADB.ORG](mailto:MARIAESC@IADB.ORG)
+
+**Divisiones del BID involucradas:**
+TSP (Transporte) · DRM (Gestión de Riesgo de Desastres) · CCS (Cambio Climático)
+
+---
+
+## Licencia
+
+Este proyecto se distribuye bajo la **licencia AM-331-A3 del Banco Interamericano de Desarrollo**.
+Consulte el texto completo en la página [Licencia](licencia.md).

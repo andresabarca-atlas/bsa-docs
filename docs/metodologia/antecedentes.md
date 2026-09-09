@@ -65,7 +65,7 @@ Entre los principales retos reconocidos para el BSA 2.0 se encuentran:
 - **Capacidades institucionales**: la operación sostenida de la plataforma requiere equipos técnicos con formación en SIG, hidrología y gestión de riesgo.
 - **Escalabilidad y participación**: la plataforma debe permitir a los usuarios nacionales actualizar datos de entrada y ejecutar sus propios análisis.
 
-La arquitectura modular permite actualizar los insumos y repetir el análisis cuando mejoren las mallas de amenaza, los inventarios, las funciones de vulnerabilidad o los datos operacionales. Cada actualización debe conservar la trazabilidad y no cambia el alcance esencial de la herramienta: integrar insumos preparados externamente para apoyar el cribado de una red.
+La incorporación creciente de inteligencia artificial —para predicción de amenazas, identificación automática de exposición y optimización de decisiones— abre la posibilidad de evolucionar el BSA 2.0 hacia esquemas híbridos que combinen modelos probabilistas clásicos con componentes de IA, ampliando su capacidad predictiva y su aplicabilidad en entornos de alta incertidumbre (Camps-Valls et al., 2024).
 
 ---
 

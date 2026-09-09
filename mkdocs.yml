@@ -60,7 +60,6 @@ plugins:
             Módulo de Vulnerabilidad: Vulnerability Module
             Módulo de Criticidad: Criticality Module
             Cálculo de Riesgo: Risk Calculation
-            Priorización: Prioritization
             Estructura de datos: Data Structure
             Primeros pasos: Getting Started
             Requisitos: Requirements
@@ -126,7 +125,6 @@ nav:
       - Módulo de Vulnerabilidad: metodologia/modulo-vulnerabilidad.md
       - Módulo de Criticidad: metodologia/modulo-criticidad.md
       - Cálculo de Riesgo: metodologia/calculo-riesgo.md
-      - Priorización: metodologia/priorizacion.md
       - Estructura de datos: metodologia/estructura-datos.md
   - Primeros pasos:
       - getting-started/index.md
