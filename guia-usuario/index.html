@@ -27,15 +27,15 @@
       
       
       <link rel="icon" href="../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Guía de Usuario - Blue Spot Analysis 2.0</title>
+        <title>Guía de usuario - Blue Spot Analysis 2.0</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Guía de Usuario
+              Guía de usuario
             
           </span>
         </div>
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -797,6 +799,34 @@
     
   
     Cálculo de Riesgo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metodologia/priorizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priorización
   
 
     
@@ -1694,21 +1724,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#el-proceso-en-sintesis" class="md-nav__link">
+  <a href="#secuencia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El proceso en síntesis
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contenido-de-esta-seccion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Contenido de esta sección
+        Secuencia
       
     </span>
   </a>
@@ -1732,52 +1751,19 @@
 
 
 
-<h1 id="guia-de-usuario">Guía de Usuario<a class="headerlink" href="#guia-de-usuario" title="Permanent link">&para;</a></h1>
-<p>Esta sección describe cómo usar el BSA 2.0 de principio a fin: desde la preparación y estandarización de los datos de entrada hasta la interpretación de los mapas de riesgo y la priorización de inversiones.</p>
-<h2 id="el-proceso-en-sintesis">El proceso en síntesis<a class="headerlink" href="#el-proceso-en-sintesis" title="Permanent link">&para;</a></h2>
-<p>El BSA 2.0 transforma datos geoespaciales crudos en un ranking de tramos viales según su riesgo ante amenazas naturales. El proceso se puede resumir en cuatro etapas:</p>
-<div class="highlight"><pre><span></span><code>  Datos brutos                Preparación                 Ejecución               Interpretación
-       │                           │                           │                         │
-  Red vial        ──────►   Estandarizar capas   ──────►  Toolbox BSA2    ──────►  Mapas DAE / PAE
-  Rásters amenaza           Completar atributos            (ArcGIS Pro)            Ranking Priority
-  Vulnerabilidad            Calcular PIB/día                                       Dashboard BID
-  Costos                    Definir segmentación
-</code></pre></div>
-<h2 id="contenido-de-esta-seccion">Contenido de esta sección<a class="headerlink" href="#contenido-de-esta-seccion" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Página</th>
-<th>Qué encontrarás</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="flujo-trabajo/">Flujo de trabajo</a></td>
-<td>Secuencia paso a paso desde la recepción de datos hasta la carga de resultados al dashboard.</td>
-</tr>
-<tr>
-<td><a href="datos-entrada/">Datos de entrada</a></td>
-<td>Descripción completa de cada capa de entrada: formato, atributos, obligatoriedad y convención de nombres.</td>
-</tr>
-<tr>
-<td><a href="configuracion-corrida/">Configuración de una corrida</a></td>
-<td>Cómo asignar parámetros en el toolbox, elegir la longitud de segmento y definir los parámetros económicos.</td>
-</tr>
-<tr>
-<td><a href="resultados/">Resultados</a></td>
-<td>Descripción de las capas de salida, sus campos y cómo interpretar DAE, PAE y Priority para la priorización.</td>
-</tr>
-<tr>
-<td><a href="caso-ejemplo/">Caso de ejemplo — Costa Rica</a></td>
-<td>Ejemplo completo con los datos del caso de referencia de Costa Rica.</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="admonition-title">Punto de partida sugerido</p>
-<p>Si es la primera vez que usa el BSA 2.0, lea primero el <a href="flujo-trabajo/">Flujo de trabajo</a> para tener una visión global del proceso, luego revise <a href="datos-entrada/">Datos de entrada</a> para validar que sus insumos cumplen el formato requerido.</p>
-</div>
+<h1 id="guia-de-usuario">Guía de usuario<a class="headerlink" href="#guia-de-usuario" title="Permanent link">&para;</a></h1>
+<p>Esta sección acompaña una corrida desde la preparación de insumos hasta la revisión de resultados. Antes de comenzar, lea los contratos de <a href="../metodologia/modulo-amenaza/">amenaza</a>, <a href="../metodologia/modulo-exposicion/">exposición</a> y <a href="../metodologia/modulo-vulnerabilidad/">vulnerabilidad</a>.</p>
+<h2 id="secuencia">Secuencia<a class="headerlink" href="#secuencia" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Reunir y documentar los insumos producidos externamente.</li>
+<li>Validar geometría, campos, unidades, nombres y <code>EPSG:4326</code>.</li>
+<li>Cargar capas y CSV en el toolbox.</li>
+<li>Definir PIB per cápita diario y distancia de muestreo.</li>
+<li>Ejecutar y revisar mensajes.</li>
+<li>Validar DAE, PAE y prioridad.</li>
+<li>Publicar únicamente resultados aprobados en el dashboard.</li>
+</ol>
+<p>El BSA 2.0 integra información y calcula consecuencias. No corrige automáticamente errores científicos, topológicos, monetarios o de cobertura.</p>
 
 
 
@@ -1876,7 +1862,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       

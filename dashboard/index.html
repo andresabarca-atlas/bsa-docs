@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -35,7 +35,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -504,6 +504,8 @@
       
         
       
+        
+      
     
     
     
@@ -797,6 +799,34 @@
     
   
     Cálculo de Riesgo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metodologia/priorizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priorización
   
 
     
@@ -1694,10 +1724,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-y-para-que-sirve" class="md-nav__link">
+  <a href="#informacion-que-debe-publicarse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Qué es y para qué sirve?
+        Información que debe publicarse
       
     </span>
   </a>
@@ -1705,49 +1735,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#estructura-del-dashboard-dos-pestanas" class="md-nav__link">
+  <a href="#lectura-responsable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estructura del dashboard: dos pestañas
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Estructura del dashboard: dos pestañas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-view" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        General View
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loss-curves" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Loss Curves
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#relacion-con-la-herramienta-bsa-20" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Relación con la herramienta BSA 2.0
+        Lectura responsable
       
     </span>
   </a>
@@ -1772,44 +1763,23 @@
 
 
 <h1 id="dashboard-bsa-20">Dashboard BSA 2.0<a class="headerlink" href="#dashboard-bsa-20" title="Permanent link">&para;</a></h1>
-<p>El <strong>Dashboard BSA 2.0</strong> es la interfaz en línea que permite visualizar, explorar e interpretar los resultados del análisis de riesgo producidos por la herramienta. Está concebido para facilitar el diálogo con tomadores de decisión y apoyar la priorización de inversiones en infraestructura de transporte.</p>
-<!-- FALTA CAPTURA: vista general del dashboard (pantalla completa con ambas pestañas visibles) -->
-
-<div class="admonition info">
-<p class="admonition-title">Un dashboard por país</p>
-<p>Cada país implementado tiene su propio dashboard con sus resultados específicos. Los valores monetarios se expresan en la <strong>moneda local</strong> de cada país (por ejemplo, pesos dominicanos — DOP — en el caso de República Dominicana). Consulte la sección <a href="resultados-paises/">Resultados por país</a> para acceder a cada dashboard.</p>
-</div>
-<hr />
-<h2 id="que-es-y-para-que-sirve">¿Qué es y para qué sirve?<a class="headerlink" href="#que-es-y-para-que-sirve" title="Permanent link">&para;</a></h2>
-<p>El dashboard está construido como una <strong>aplicación de ArcGIS Experience</strong> accesible desde cualquier navegador web, sin necesidad de instalar software adicional. Permite a técnicos y tomadores de decisión:</p>
+<p>El tablero es una aplicación de referencia construida con <strong>ArcGIS Experience Builder</strong> para consultar y comunicar resultados previamente calculados y publicados. No recibe insumos crudos, no ejecuta el toolbox y no recalcula DAE, PAE o prioridad.</p>
+<p><a class="md-button md-button--primary" href="https://experience.arcgis.com/experience/927adc515c684c7682a8924b403ca8b1">Abrir la implementación de referencia</a></p>
+<p><img alt="Vista inicial original de la implementación de referencia" src="../assets/bsa2/dashboard-13.png" /></p>
+<h2 id="informacion-que-debe-publicarse">Información que debe publicarse<a class="headerlink" href="#informacion-que-debe-publicarse" title="Permanent link">&para;</a></h2>
+<p>Como mínimo, las capas deben conservar:</p>
 <ul>
-<li>Identificar los activos viales con mayor riesgo acumulado (priorización por DAE y PAE).</li>
-<li>Comparar la magnitud de daños y pérdidas entre distintos tipos de amenaza.</li>
-<li>Consultar las curvas de excedencia de pérdidas para entender la probabilidad asociada a distintos niveles de impacto.</li>
-<li>Explorar el mapa interactivo con los resultados georreferenciados.</li>
+<li>identificador del activo y, para activos puntuales, <code>ID_TRAMO</code>;</li>
+<li>tipo de activo y atributos descriptivos;</li>
+<li><code>DAE</code> o <code>DAE_total</code>;</li>
+<li><code>PAE_total</code>;</li>
+<li><code>Priority</code>;</li>
+<li>moneda, año base, escenario, horizonte y versión;</li>
+<li>campos modificados por escenario climático, cuando apliquen.</li>
 </ul>
-<hr />
-<h2 id="estructura-del-dashboard-dos-pestanas">Estructura del dashboard: dos pestañas<a class="headerlink" href="#estructura-del-dashboard-dos-pestanas" title="Permanent link">&para;</a></h2>
-<p>El dashboard se organiza en dos pestañas principales:</p>
-<h3 id="general-view">General View<a class="headerlink" href="#general-view" title="Permanent link">&para;</a></h3>
-<p>La pestaña <strong>General View</strong> es la vista principal del dashboard. Integra en una sola pantalla:</p>
-<ul>
-<li><strong>Indicadores de resumen</strong> en la parte superior: longitud total evaluada, DAE total y PAE total de la red.</li>
-<li><strong>Panel de activos priorizados</strong> (izquierda): lista jerarquizada de los activos con mayor riesgo, segmentada por tipo (carreteras, drenaje, túneles, puentes).</li>
-<li><strong>Mapa interactivo</strong> (centro): representación espacial de los activos con simbología graduada según el nivel de riesgo.</li>
-<li><strong>Panel de comparación EAL vs. EAD</strong> (derecha): gráficos que desglosan los resultados por tipo de amenaza y por tipo de activo.</li>
-<li><strong>Tabla de segmentos críticos</strong> (inferior): los cinco segmentos con mayor criticidad y sus métricas de DAE y PAE.</li>
-</ul>
-<h3 id="loss-curves">Loss Curves<a class="headerlink" href="#loss-curves" title="Permanent link">&para;</a></h3>
-<p>La pestaña <strong>Loss Curves</strong> muestra las <strong>curvas de excedencia de pérdidas (CEP)</strong> del portafolio analizado. Estas curvas permiten relacionar la magnitud de las pérdidas esperadas con su frecuencia anual de ocurrencia, herramienta fundamental para el diseño de estrategias de gestión de riesgo.</p>
-<hr />
-<h2 id="relacion-con-la-herramienta-bsa-20">Relación con la herramienta BSA 2.0<a class="headerlink" href="#relacion-con-la-herramienta-bsa-20" title="Permanent link">&para;</a></h2>
-<p>El dashboard consume directamente los resultados generados por la herramienta de escritorio BSA 2.0 (toolbox de ArcGIS Pro). El flujo es:</p>
-<pre class="mermaid"><code>flowchart LR
-    A[Datos de entrada\n+ herramienta BSA 2.0] --&gt; B[Archivos de resultados\nDAE · PAE · CEP]
-    B --&gt; C[Carga al servicio\nArcGIS Online]
-    C --&gt; D[Dashboard\nArcGIS Experience]</code></pre>
-<p>Para conocer cómo se generan estos resultados, consulte la sección <a href="../guia-usuario/resultados/">Guía de Usuario</a>.</p>
+<p>Las categorías, colores, rangos y filtros deben configurarse sobre campos equivalentes. Una actualización de datos exige revisar pop-ups, gráficos, tablas, joins, filtros y escalas de visualización.</p>
+<h2 id="lectura-responsable">Lectura responsable<a class="headerlink" href="#lectura-responsable" title="Permanent link">&para;</a></h2>
+<p>El tablero sirve para explorar concentraciones espaciales y comparar activos dentro de un conjunto homogéneo. No debe usarse para comparar valores con moneda, año base, cobertura o metodología diferentes sin una armonización previa.</p>
 
 
 
@@ -1908,7 +1878,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
