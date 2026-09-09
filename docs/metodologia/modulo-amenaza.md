@@ -1,83 +1,70 @@
-# Módulo de Amenaza
+# Módulo de amenaza
 
-El módulo de amenaza del BSA 2.0 caracteriza las amenazas naturales relevantes para la infraestructura vial, priorizando aquellas que generan interrupciones recurrentes o daños estructurales significativos. La herramienta trabaja con mallas ráster de intensidad de amenaza asociadas a períodos de retorno discretos, que son el tipo de dato más comúnmente disponible en los países de América Latina y el Caribe.
+## Función del módulo
 
-## Amenazas implementadas
+El módulo recibe mallas de intensidad elaboradas fuera del BSA 2.0, comprueba que puedan incorporarse al flujo y las asocia con los activos expuestos. **No ejecuta modelos hidrológicos, hidráulicos, costeros, sísmicos ni climáticos.**
 
-### Inundación fluvial
+![De capas de intensidad a un conjunto de mallas listo para el flujo de cálculo](../assets/bsa2/modulo-amenaza.png)
 
-Se genera por desbordamiento de cauces como resultado de lluvias prolongadas o intensas sobre una cuenca hidrográfica. El enfoque combina:
+## Amenazas e intensidades
 
-- **Modelación hidrológica** (estimación de caudales de diseño): herramientas como HEC-HMS, HydroBID o SWAT.
-- **Modelación hidráulica** (propagación del flujo): herramientas como HEC-RAS 2D, LISFLOOD-FP o HydroBID Flood.
+| Amenaza | Código documental | Intensidad | Unidad |
+|---|---:|---|---|
+| Inundación pluvial | `pl` | Tirante de agua | m |
+| Inundación fluvial | `ri` | Tirante de agua | m |
+| Inundación costera | `co` | Tirante de agua | m |
+| Tsunami | `ts` | Tirante de agua | m |
+| Sismo | `eq` | PGA o aceleración espectral `SA##` | g |
+| Licuefacción | `li` | Susceptibilidad: 1 baja, 2 media, 3 alta, 4 muy alta | clase |
 
-Los productos son mapas de **tirante hídrico (TH)** y **velocidad media del flujo (V)** para distintos períodos de retorno.
+La interfaz actual dispone de grupos multivalor para **inundación fluvial, inundación costera, tsunami y sismo**. La licuefacción se carga como una sola capa complementaria del análisis sísmico. No existe un cuadro independiente para inundación pluvial en la versión actual.
 
-### Inundación pluvial y costera
+## Contrato de datos
 
-**Pluvial**: se origina por lluvias intensas que exceden la capacidad de los sistemas de drenaje urbano. Se modela mediante enfoques hidrológicos e hidrodinámicos urbanos (EPA SWMM, InfoWorks ICM, MIKE URBAN+).
+Cada malla principal debe cumplir:
 
-**Costera**: se asocia a la acción combinada de oleaje, marea astronómica, marea de tormenta (*storm surge*) y ascenso del nivel del mar. Se representan con modelos como ADCIRC, Delft3D, MIKE 21 o XBeach.
+| Propiedad | Especificación |
+|---|---|
+| Formato | GeoTIFF (`.tif`) |
+| Tipo de dato | `Float32` para intensidades continuas |
+| Referencia espacial | WGS 84, `EPSG:4326` |
+| NoData | Valor explícito y consistente |
+| Cobertura y alineación | Compatibles dentro del conjunto analizado |
+| Período de retorno | Identificable en el nombre del archivo |
 
-Ambas amenazas producen mallas de TH y V por período de retorno.
+Convención documental recomendada:
 
-### Sismo
+```text
+{amenaza}_{escenario}_{año}_{país}_TR{periodo}.tif
+```
 
-La amenaza sísmica se representa mediante **análisis de amenaza sísmica probabilista (PSHA)**, que integra fuentes sismogénicas, leyes de atenuación y catálogos históricos. El producto son mapas de **aceleración pico del suelo (PGA)** para distintos períodos de retorno. Herramientas como OpenQuake o CRISIS permiten la modelación regional o nacional.
+Ejemplo: `ri_ssp245_2050_gt_TR100.tif`.
 
-### Tsunami
+Los escenarios CMIP6 se codifican como `ssp126`, `ssp245`, `ssp370` y `ssp585`. El código del país debe ser único y documentarse en el proyecto.
 
-Los tsunamis se modelan a partir de fuentes sismogénicas costeras y submarinas, propagando las ondas hasta la costa mediante modelos numéricos. Los productos son mallas de altura de inundación y velocidad de flujo por evento de diseño.
+!!! warning "Cómo interpreta el código actual los nombres"
+    El toolbox asocia el tipo de amenaza según el cuadro donde se carga el ráster y extrae como período de retorno **la última secuencia entera del nombre**. Por ello, el nombre debe terminar en el número del TR; evite números posteriores. La convención completa mejora la trazabilidad, pero la versión actual no valida todos sus componentes.
 
-### Licuefacción
+## Probabilidad y coherencia
 
-La licuefacción es el fenómeno por el cual suelos saturados pierden resistencia durante un sismo. Se modela a partir de mapas de susceptibilidad de suelos, aceleración sísmica y nivel freático. Los productos son índices de susceptibilidad o mapas de probabilidad de ocurrencia por período de retorno sísmico.
+Para cada período de retorno:
 
----
+$$p = \frac{1}{TR}$$
 
-!!! note "Amenazas en fases futuras"
-    Las amenazas de **deslizamientos** y **huracanes** están contempladas en el diseño del BSA 2.0, pero están previstas para fases futuras de desarrollo. No se encuentran implementadas en la versión actual de la herramienta.
+Se necesitan al menos dos TR válidos por amenaza para obtener una integral anual distinta de cero. Antes de ejecutar, verifique que las intensidades, unidades, extensión, resolución y NoData sean coherentes, y que la intensidad no disminuya de manera físicamente inexplicable al aumentar el TR.
 
----
+## Climate layer: sensibilidad del cambio de frecuencia
 
-## Resumen de tipos de amenaza
+`Climate layer` es una capa **poligonal** opcional. No contiene una nueva intensidad y no modifica los daños calculados para cada evento. Reasigna, por zona y escenario, el período de retorno histórico (T) a un período futuro (T'), y vuelve a integrar DAE y PAE para inundación fluvial y costera.
 
-| Amenaza | Estado | Herramientas de referencia | Medida de intensidad |
-|---|---|---|---|
-| Inundación fluvial | ✅ Implementada | HEC-RAS, LISFLOOD-FP, HydroBID Flood | TH, V |
-| Inundación pluvial | ✅ Implementada | EPA SWMM, InfoWorks ICM, MIKE URBAN+ | TH, V |
-| Inundación costera | ✅ Implementada | ADCIRC, Delft3D, MIKE 21, XBeach | TH, V |
-| Sismo | ✅ Implementada | OpenQuake, CRISIS | PGA |
-| Tsunami | ✅ Implementada | Modelos de propagación de ondas | TH, V |
-| Licuefacción | ✅ Implementada | Modelos de susceptibilidad | Índice / Probabilidad |
-| Deslizamientos | 🔜 Fase futura | SHALSTAB, TRIGRS, modelos de ML | LD |
-| Huracanes | 🔜 Fase futura | HAZUS-MH, ADCIRC+SWAN, CHAZ | WS |
+Los campos siguen el patrón:
 
-## Escalas temporales y espaciales
+```text
+TP{periodo_histórico}S{escenario}M
+```
 
-Los modelos de amenaza se diseñan para operar desde el nivel regional hasta el nacional, cubriendo extensas redes viales y corredores estratégicos. En cuanto a la escala temporal, el módulo emplea **períodos de retorno representativos**: 10, 50, 100, 200 y 500 años (o sus equivalentes en frecuencia anual de excedencia).
+Ejemplos: `TP50S2M`, `TP100S2M`. Cada valor es el TR futuro positivo asociado a ese TP histórico. Se requieren al menos dos pares válidos por escenario para integrar la curva modificada.
 
-El módulo es compatible con datos de amenaza provenientes de iniciativas internacionales como:
+!!! note
+    Este análisis representa únicamente sensibilidad al **cambio de frecuencia**. No sustituye mallas futuras ni un estudio de cambio en intensidad.
 
-- **GLOFAS** (inundación fluvial global)
-- **AQUEDUCT** (riesgo hídrico)
-- **ThinkHazard!** (múltiples amenazas)
-- **World Bank Disaster Risk Data Platform**
-
-Esta estructura captura el comportamiento probabilista de las amenazas y es coherente con el enfoque de estimación simplificada de la PAE y la CEP.
-
-## Escenarios de cambio climático
-
-El módulo de amenaza permite la incorporación de **escenarios climáticos futuros**, en particular los *Shared Socioeconomic Pathways* (SSP) del CMIP6:
-
-- **SSP2-4.5**: escenario de emisiones intermedias.
-- **SSP5-8.5**: escenario de altas emisiones.
-
-Se pueden incluir mapas de amenaza generados con proyecciones de precipitación o nivel del mar bajo estos escenarios, permitiendo la **comparación entre escenarios actuales y futuros** para capturar el efecto incremental del cambio climático sobre la amenaza. Esto es coherente con los Modelos de Circulación General del CMIP5 y CMIP6 (Eyring et al., 2016).
-
-!!! tip "Interoperabilidad con datos existentes"
-    La herramienta acepta mallas de amenaza en formatos GeoTIFF y Raster Esri Grid, lo que facilita el uso de modelos de amenaza ya generados por agencias nacionales o instituciones internacionales, sin necesidad de ejecutar nuevas modelaciones hidrodinámicas.
-
----
-
-*Para entender cómo se intersectan las mallas de amenaza con los elementos expuestos, véase [Módulo de Exposición](modulo-exposicion.md) y [Lógica funcional y arquitectura](arquitectura.md).*

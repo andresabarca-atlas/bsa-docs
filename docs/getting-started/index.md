@@ -1,29 +1,19 @@
 # Primeros pasos
 
-El BSA 2.0 es una herramienta de escritorio que corre dentro de **ArcGIS Pro** como un *geoprocessing toolbox*. Para comenzar a trabajar con ella es necesario contar con el software base, los datos de entrada correctamente organizados y el toolbox instalado en el proyecto ArcGIS Pro.
+BSA 2.0 se ejecuta en ArcGIS Pro como una herramienta de geoprocesamiento. Para comenzar necesita el paquete vigente, una licencia válida, permisos de escritura y los insumos preparados conforme a esta documentación.
 
-Esta sección describe todo lo que se necesita antes de la primera ejecución.
+## Antes de la primera corrida
 
-## Fases de acceso
+1. Compruebe los [requisitos del sistema](requisitos.md).
+2. Agregue el toolbox según la guía de [instalación](instalacion.md).
+3. Ordene y congele los archivos de [entrada](organizacion-datos.md).
+4. Revise todas las etiquetas de la [interfaz](interfaz.md).
+5. Ejecute primero un subconjunto pequeño y verificable.
 
-La distribución del BSA 2.0 sigue un esquema de liberación progresiva:
+## Acceso
 
-| Fase | Estado | Descripción |
-|------|--------|-------------|
-| **Alfa interno** | Activo | Disponible exclusivamente para el equipo técnico del BID y consultores directos del proyecto. Acceso por coordinación directa con el equipo. |
-| **Beta — distribución controlada** | Próximamente | Acceso para unidades gubernamentales seleccionadas y socios técnicos bajo acuerdo de uso con el BID. |
-| **Versión estable** | A futuro | Disponible para el público técnico conforme al marco de licencia del BID (AM-331-A3). |
+El toolbox y los datos pueden estar sujetos a canales y permisos institucionales. Solicite al responsable del proyecto la versión autorizada de `BSA2.atbx`, `BSA2.py` y las bases asociadas. Esta web documenta su uso, pero no implica acceso automático a datos restringidos.
 
-<!-- COMPLETAR: enlace de descarga (a futuro) -->
+!!! warning
+    No use una copia cuyo script y toolbox pertenezcan a versiones diferentes. Registre la versión usada en cada análisis.
 
-!!! note "Acceso actual"
-    En la etapa Alfa, el toolbox se distribuye directamente a través del equipo de proyecto. Para solicitar acceso, contacte a **María Alejandra Escovar** (MARIAESC@IADB.ORG).
-
-## Contenido de esta sección
-
-| Página | Qué encontrarás |
-|--------|-----------------|
-| [Requisitos del sistema](requisitos.md) | Software, hardware y conocimientos previos necesarios para usar el BSA 2.0. |
-| [Instalación](instalacion.md) | Pasos para instalar ArcGIS Pro, el toolbox `BSA2.atbx` y configurar el entorno Python. |
-| [Organización de datos](organizacion-datos.md) | Estructura de carpetas recomendada para capas de exposición, mallas de amenaza y bases de datos. |
-| [Interfaz de la herramienta](interfaz.md) | Descripción de cada parámetro del toolbox `BSA2` en ArcGIS Pro. |
