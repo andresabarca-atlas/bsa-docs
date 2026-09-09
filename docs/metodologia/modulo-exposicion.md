@@ -1,68 +1,70 @@
-# Módulo de exposición
+# Módulo de Exposición
 
-## Función del módulo
+El módulo de exposición identifica, caracteriza y valora los elementos de infraestructura expuestos a las amenazas modeladas. Su producto central es el **modelo de exposición**: un inventario georeferenciado de la red vial que sirve como base de datos espacial para todos los cálculos posteriores de daño y pérdida.
 
-La exposición es el conjunto de sistemas y activos susceptibles de daño. El BSA 2.0 no crea ni completa el inventario: recibe capas preparadas por el usuario, las cruza con la amenaza y conserva los atributos necesarios para daño, interrupción y agregación.
+## Tipos de infraestructura analizada
 
-![Localización y caracterización de los activos expuestos](../assets/bsa2/modulo-exposicion.png)
+El BSA 2.0 analiza cuatro categorías principales de infraestructura de transporte:
 
-## Capas admitidas
+| Categoría | Descripción |
+|---|---|
+| **Vías** | Redes de carreteras principales y secundarias, municipales o corredores estratégicos |
+| **Puentes y pasos elevados** | Estructuras transversales en la red vial; alta importancia funcional y valor económico por unidad |
+| **Sistemas de drenaje** | Canalizaciones, cajas, rejillas, zanjas y obras hidráulicas menores dentro de los corredores |
+| **Estructuras de control** | Diques, muros de contención y obras hidráulicas que influyen en la dinámica de flujos |
 
-| Capa | Geometría | Función |
-|---|---|---|
-| Carreteras | Línea | Unidad de red y soporte de tránsito, daño, PAE y prioridad. |
-| Puentes | Punto | Activo asociado a un tramo vial. |
-| Túneles | Punto | Activo asociado a un tramo vial. |
-| Drenajes | Punto | Activo asociado a un tramo vial. |
+## Métodos de caracterización
 
-Todas las capas deben utilizar `EPSG:4326`, tener geometría válida, cobertura compatible y un identificador único sin nulos ni duplicados.
+La construcción del modelo de exposición se apoya en cuatro fuentes complementarias:
 
-## Carreteras
+1. **Datos nacionales institucionales**: inventarios viales y registros de puentes disponibles en sistemas de gestión vial o catálogos de infraestructura (HAZUS, FHWA).
+2. **Sensores remotos**: teledetección LiDAR, imágenes ópticas y radar SAR para extraer información sobre geometría de red, puentes y canalizaciones.
+3. **Inteligencia artificial**: técnicas de aprendizaje automático y visión por computadora (CNN sobre imágenes aéreas o SAR) para detectar automáticamente puentes, accesos y daño potencial.
+4. **Talleres de validación técnica**: verificación presencial de la información digital con ingenieros locales, especialmente para calibrar capacidad de diseño, nivel de mantenimiento y vulnerabilidad estructural.
 
-| Campo | Tipo | Uso |
-|---|---|---|
-| `ID_TRAMO` | Entero | **Obligatorio.** Identificador único del tramo. |
-| `NODO_INI`, `NODO_FIN` | Texto/entero | Recomendados para trazabilidad; la red de cálculo usa los extremos geométricos. |
-| `NOMBRE`, `ADMIN`, `CLASE` | Texto | Descripción y clasificación. |
-| `Longitud` | Numérico | Longitud del tramo en metros usada por el cálculo de desvío. |
-| `ANCHO` | Numérico | Ancho en metros, cuando la función o el costo lo requiera. |
-| `SUPERFICIE` | Texto | `S` o `N`, según la taxonomía adoptada. |
-| `REDUNDANCI`, `DIRECCION`, `CARRILES` | Texto/entero | Atributos operacionales y de red. |
-| `T9`–`T15` | Numérico | Tránsito diario por categoría vehicular. |
-| `vul_f` | Texto | Taxonomía para inundación/tsunami. |
-| `vul_eq` | Texto | Taxonomía para sismo. |
-| `rep_cost_k` | Numérico | Costo de reposición en moneda local por kilómetro. |
+## Segmentación y valoración económica
 
-El nombre `Longitud` refleja el campo que consulta la versión actual del código. Debe contener metros y ser coherente con la geometría.
+### Segmentación
 
-## Puentes, túneles y drenajes
+La infraestructura se divide en **unidades homogéneas** (Elementos Expuestos, EE) por tipo, ubicación, jerarquía funcional o exposición al riesgo. Cada EE se representa como un punto en un shapefile, usualmente a intervalos regulares a lo largo de la red vial (p. ej., cada 1 km entre intersecciones, o por puente individual).
 
-Cada activo puntual requiere:
+### Valoración económica
 
-| Campo | Tipo | Uso |
-|---|---|---|
-| `ID_PUENTE`, `ID_TUNEL` o `ID_DRENAJE` | Entero | Identificador único según la capa. |
-| `ID_TRAMO` | Entero | Enlace con el tramo vial. |
-| `NOMBRE`, `ADMIN`, `CLASE` | Texto | Caracterización. |
-| `vul_f`, `vul_eq` | Texto | Taxonomías de vulnerabilidad. |
-| `rep_cost` | Numérico | Costo total de reposición, en moneda local. |
+Cada elemento se valora según su **costo de reposición estimado** a partir de parámetros como longitud, área, materiales y tipo de construcción. En ausencia de datos locales se utilizan ecuaciones estándar ajustadas por país y tipo de infraestructura (catálogos FHWA, BID o unidades locales de obra).
 
-Los campos adicionales de material, dimensiones o capacidad pueden conservarse, pero sus nombres y unidades deben documentarse.
+Se asignan dos valores monetarios a cada EE:
 
-## Segmentación y muestreo
+- **VFi (Valor Físico de la Infraestructura)**: costo de reposición del tramo; interviene en el cálculo del *daño físico*.
+- **VFt (Valor Económico del Tránsito)**: valor económico del tránsito que circula por el tramo; interviene en el cálculo de la *pérdida funcional*.
 
-`Road segment length (m)` determina la separación de los puntos con los que se muestrea la intensidad sobre las líneas. Debe elegirse en relación con el tamaño de celda del ráster de amenaza:
+## Supuestos del modelo de exposición
 
-- un valor menor produce más puntos y mayor detalle espacial, pero aumenta el tiempo de cómputo;
-- un valor mayor acelera la corrida, pero puede omitir variaciones locales.
+!!! note "Carácter estático del modelo"
+    El modelo de exposición representa un **momento específico** en el tiempo (la fecha de actualización del inventario). No refleja cambios dinámicos en la red vial ni en los valores económicos.
 
-Este parámetro no corrige la topología ni sustituye la preparación previa de los tramos nodo–nodo.
+- Cubre todos los elementos de la red vial: lineales (carreteras y calles) y puntuales (puentes, pontones, viaductos).
+- Se construye a partir de supuestos y consideraciones derivados de la naturaleza de los datos disponibles.
+- Cada EE puede contener varias tipologías estructurales con participaciones porcentuales que caracterizan la zona homogénea de análisis.
 
-## Validación mínima
+## Atributos del modelo de exposición
 
-1. Confirmar `EPSG:4326`.
-2. Reparar geometrías y eliminar identificadores nulos o duplicados.
-3. Comprobar que cada activo puntual referencia un `ID_TRAMO` existente.
-4. Revisar que taxonomías, costos y tránsito estén completos y en unidades homogéneas.
-5. Verificar que cada línea represente un único enlace entre nodos de la red.
+La tabla siguiente muestra los campos mínimos recomendados para la base de datos georeferenciada:
 
+| Campo | Descripción |
+|---|---|
+| `Id_ElementoExp` | Identificador único del elemento expuesto |
+| `Long`, `Lat` | Coordenadas en WGS84 |
+| `Zona_homog` | Zona homogénea a la que pertenece el EE |
+| `Tipo_Estruct` | Tipología estructural (material, tipo de pavimento, etc.) |
+| `Znatural` | Cota topográfica natural (m s.n.m.) |
+| `Zartificial` | Altura artificial sobre la rasante de la vía |
+| `Val_Inf` (VFi) | Valor económico expuesto – infraestructura vial |
+| `Val_Tr` (VFt) | Valor económico expuesto – tránsito |
+| `Poblacion` | Número de habitantes en el área de influencia |
+| `Tipo_Via` | Clasificación funcional (autopista, primaria, secundaria, etc.) |
+| `Cond_Adaptado` | Condición de adaptación a inundación (0 = no adaptado, 1 = adaptado) |
+| `Dist_Cauce` | Distancia ortogonal al cuerpo de agua más cercano (m) |
+
+---
+
+*Para comprender cómo el modelo de exposición se intersecta con las mallas de amenaza y las funciones de vulnerabilidad, véase [Arquitectura y módulos](arquitectura.md).*

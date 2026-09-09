@@ -1,16 +1,29 @@
-# Guía de usuario
+# Guía de Usuario
 
-Esta sección acompaña una corrida desde la preparación de insumos hasta la revisión de resultados. Antes de comenzar, lea los contratos de [amenaza](../metodologia/modulo-amenaza.md), [exposición](../metodologia/modulo-exposicion.md) y [vulnerabilidad](../metodologia/modulo-vulnerabilidad.md).
+Esta sección describe cómo usar el BSA 2.0 de principio a fin: desde la preparación y estandarización de los datos de entrada hasta la interpretación de los mapas de riesgo y la priorización de inversiones.
 
-## Secuencia
+## El proceso en síntesis
 
-1. Reunir y documentar los insumos producidos externamente.
-2. Validar geometría, campos, unidades, nombres y `EPSG:4326`.
-3. Cargar capas y CSV en el toolbox.
-4. Definir PIB per cápita diario y distancia de muestreo.
-5. Ejecutar y revisar mensajes.
-6. Validar DAE, PAE y prioridad.
-7. Publicar únicamente resultados aprobados en el dashboard.
+El BSA 2.0 transforma datos geoespaciales crudos en un ranking de tramos viales según su riesgo ante amenazas naturales. El proceso se puede resumir en cuatro etapas:
 
-El BSA 2.0 integra información y calcula consecuencias. No corrige automáticamente errores científicos, topológicos, monetarios o de cobertura.
+```
+  Datos brutos                Preparación                 Ejecución               Interpretación
+       │                           │                           │                         │
+  Red vial        ──────►   Estandarizar capas   ──────►  Toolbox BSA2    ──────►  Mapas DAE / PAE
+  Rásters amenaza           Completar atributos            (ArcGIS Pro)            Ranking Priority
+  Vulnerabilidad            Calcular PIB/día                                       Dashboard BID
+  Costos                    Definir segmentación
+```
 
+## Contenido de esta sección
+
+| Página | Qué encontrarás |
+|--------|-----------------|
+| [Flujo de trabajo](flujo-trabajo.md) | Secuencia paso a paso desde la recepción de datos hasta la carga de resultados al dashboard. |
+| [Datos de entrada](datos-entrada.md) | Descripción completa de cada capa de entrada: formato, atributos, obligatoriedad y convención de nombres. |
+| [Configuración de una corrida](configuracion-corrida.md) | Cómo asignar parámetros en el toolbox, elegir la longitud de segmento y definir los parámetros económicos. |
+| [Resultados](resultados.md) | Descripción de las capas de salida, sus campos y cómo interpretar DAE, PAE y Priority para la priorización. |
+| [Caso de ejemplo — Costa Rica](caso-ejemplo.md) | Ejemplo completo con los datos del caso de referencia de Costa Rica. |
+
+!!! tip "Punto de partida sugerido"
+    Si es la primera vez que usa el BSA 2.0, lea primero el [Flujo de trabajo](flujo-trabajo.md) para tener una visión global del proceso, luego revise [Datos de entrada](datos-entrada.md) para validar que sus insumos cumplen el formato requerido.
